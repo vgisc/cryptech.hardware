@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="20" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -36901,10 +36901,7 @@ SD Series, Vertical mount</description>
 <sheet>
 <description>CrypTech avalanche noise evaluation board, rev 02</description>
 <plain>
-<text x="60.96" y="109.22" size="3.81" layer="91">ARM side of FMC bus</text>
 <text x="320.04" y="142.24" size="3.81" layer="91">Extra</text>
-<text x="58.928" y="59.944" size="1.778" layer="91">&lt;-- FMC_D[...] signals can be swapped</text>
-<text x="232.664" y="60.452" size="1.778" layer="91">&lt;-- FMC_A[...] signals can be swapped</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="22.86" y="-106.68"/>
@@ -36926,28 +36923,6 @@ SD Series, Vertical mount</description>
 <instance part="FID15" gate="G$1" x="396.24" y="127"/>
 </instances>
 <busses>
-<bus name="FMC_D[0..31],FMC_A[0..19],FMC_NE1,FMC_NOE,FMC_NWE,FMC_NL,FMC_NWAIT">
-<segment>
-<wire x1="60.96" y1="99.06" x2="375.92" y2="99.06" width="0.762" layer="92"/>
-<label x="55.88" y="101.6" size="1.778" layer="95"/>
-</segment>
-</bus>
-<bus name="FMC_A[20..21],DIGITIZED">
-<segment>
-<wire x1="383.54" y1="99.06" x2="388.62" y2="99.06" width="0.762" layer="92"/>
-<label x="368.3" y="106.68" size="1.778" layer="95"/>
-</segment>
-</bus>
-<bus name="FPGA_FMC_D[0..31]">
-<segment>
-<wire x1="56.388" y1="65.024" x2="218.948" y2="65.024" width="0.762" layer="92"/>
-</segment>
-</bus>
-<bus name="FPGA_FMC_A[0..25]">
-<segment>
-<wire x1="230.124" y1="65.532" x2="245.364" y2="65.532" width="0.762" layer="92"/>
-</segment>
-</bus>
 </busses>
 <nets>
 </nets>
@@ -40568,7 +40543,8 @@ one of the two positive (master)
 sides of the two available
 MRCC differential pairs)</text>
 <text x="-53.34" y="45.72" size="1.778" layer="91">&lt;-- FMC_D[...] signals can be swapped</text>
-<text x="-38.1" y="-35.56" size="1.778" layer="91">&lt;-- FMC_* control signals can be swapped</text>
+<text x="-50.8" y="-40.64" size="1.778" layer="91">&lt;-- FMC_* control signals
+      can be swapped</text>
 </plain>
 <instances>
 <instance part="U7" gate="B13" x="43.18" y="2.54"/>
@@ -40576,18 +40552,24 @@ MRCC differential pairs)</text>
 <instance part="FRAME12" gate="G$1" x="-124.46" y="-93.98"/>
 </instances>
 <busses>
-<bus name="FPGA_FMC_A[0..25]">
+<bus name="FMC_A[0..25]">
 <segment>
 <wire x1="78.74" y1="43.18" x2="93.98" y2="43.18" width="0.762" layer="92"/>
 <wire x1="78.74" y1="43.18" x2="78.74" y2="-27.94" width="0.762" layer="92"/>
 <label x="78.74" y="43.18" size="1.778" layer="95"/>
 </segment>
 </bus>
-<bus name="FPGA_FMC_D[0..31]">
+<bus name="FMC_D[0..31]">
 <segment>
 <wire x1="-55.88" y1="-33.02" x2="-55.88" y2="50.8" width="0.762" layer="92"/>
 <wire x1="-55.88" y1="50.8" x2="-40.64" y2="50.8" width="0.762" layer="92"/>
 <label x="-55.88" y="50.8" size="1.778" layer="95"/>
+</segment>
+</bus>
+<bus name="FMC_NE1,FMC_NOE,FMC_NWE,FMC_NL,FMC_NWAIT">
+<segment>
+<wire x1="-53.34" y1="-33.02" x2="-53.34" y2="-48.26" width="0.762" layer="92"/>
+<label x="-78.74" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </bus>
 </busses>
@@ -40642,452 +40624,444 @@ MRCC differential pairs)</text>
 <junction x="53.34" y="43.18"/>
 </segment>
 </net>
-<net name="FPGA_FMC_A0" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_0_13"/>
-<wire x1="48.26" y1="38.1" x2="78.74" y2="38.1" width="0.1524" layer="91"/>
-<label x="53.34" y="38.1" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A1" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L1P_T0_13"/>
-<wire x1="48.26" y1="35.56" x2="78.74" y2="35.56" width="0.1524" layer="91"/>
-<label x="53.34" y="35.56" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A2" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L1N_T0_13"/>
-<wire x1="48.26" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
-<label x="53.34" y="33.02" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A3" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L2P_T0_13"/>
-<wire x1="48.26" y1="30.48" x2="78.74" y2="30.48" width="0.1524" layer="91"/>
-<label x="53.34" y="30.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A4" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L2N_T0_13"/>
-<wire x1="48.26" y1="27.94" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
-<label x="53.34" y="27.94" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A5" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L3P_T0_DQS_13"/>
-<wire x1="48.26" y1="25.4" x2="78.74" y2="25.4" width="0.1524" layer="91"/>
-<label x="53.34" y="25.4" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A6" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L3N_T0_DQS_13"/>
-<wire x1="48.26" y1="22.86" x2="78.74" y2="22.86" width="0.1524" layer="91"/>
-<label x="53.34" y="22.86" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A7" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L4P_T0_13"/>
-<wire x1="48.26" y1="20.32" x2="78.74" y2="20.32" width="0.1524" layer="91"/>
-<label x="53.34" y="20.32" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A8" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L4N_T0_13"/>
-<wire x1="48.26" y1="17.78" x2="78.74" y2="17.78" width="0.1524" layer="91"/>
-<label x="53.34" y="17.78" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A9" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L5P_T0_13"/>
-<wire x1="48.26" y1="15.24" x2="78.74" y2="15.24" width="0.1524" layer="91"/>
-<label x="53.34" y="15.24" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A10" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L5N_T0_13"/>
-<wire x1="48.26" y1="12.7" x2="78.74" y2="12.7" width="0.1524" layer="91"/>
-<label x="53.34" y="12.7" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A11" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L6P_T0_13"/>
-<wire x1="48.26" y1="10.16" x2="78.74" y2="10.16" width="0.1524" layer="91"/>
-<label x="53.34" y="10.16" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A12" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L6N_T0_VREF_13"/>
-<wire x1="48.26" y1="7.62" x2="78.74" y2="7.62" width="0.1524" layer="91"/>
-<label x="53.34" y="7.62" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A13" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L7P_T1_13"/>
-<wire x1="48.26" y1="5.08" x2="78.74" y2="5.08" width="0.1524" layer="91"/>
-<label x="53.34" y="5.08" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A14" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L7N_T1_13"/>
-<wire x1="48.26" y1="2.54" x2="78.74" y2="2.54" width="0.1524" layer="91"/>
-<label x="53.34" y="2.54" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A15" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L8P_T1_13"/>
-<wire x1="48.26" y1="0" x2="78.74" y2="0" width="0.1524" layer="91"/>
-<label x="53.34" y="0" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A16" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L8N_T1_13"/>
-<wire x1="48.26" y1="-2.54" x2="78.74" y2="-2.54" width="0.1524" layer="91"/>
-<label x="53.34" y="-2.54" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A17" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L9P_T1_DQS_13"/>
-<wire x1="48.26" y1="-5.08" x2="78.74" y2="-5.08" width="0.1524" layer="91"/>
-<label x="53.34" y="-5.08" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A18" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L9N_T1_DQS_13"/>
-<wire x1="48.26" y1="-7.62" x2="78.74" y2="-7.62" width="0.1524" layer="91"/>
-<label x="53.34" y="-7.62" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A19" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L10P_T1_13"/>
-<wire x1="48.26" y1="-10.16" x2="78.74" y2="-10.16" width="0.1524" layer="91"/>
-<label x="53.34" y="-10.16" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A20" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L10N_T1_13"/>
-<wire x1="48.26" y1="-12.7" x2="78.74" y2="-12.7" width="0.1524" layer="91"/>
-<label x="53.34" y="-12.7" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A21" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L11P_T1_SRCC_13"/>
-<wire x1="48.26" y1="-15.24" x2="78.74" y2="-15.24" width="0.1524" layer="91"/>
-<label x="53.34" y="-15.24" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A22" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L11N_T1_SRCC_13"/>
-<wire x1="48.26" y1="-17.78" x2="78.74" y2="-17.78" width="0.1524" layer="91"/>
-<label x="53.34" y="-17.78" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A25" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L13N_T2_MRCC_13"/>
-<wire x1="48.26" y1="-27.94" x2="78.74" y2="-27.94" width="0.1524" layer="91"/>
-<label x="53.34" y="-27.94" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A23" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L12N_T1_MRCC_13"/>
-<wire x1="48.26" y1="-22.86" x2="78.74" y2="-22.86" width="0.1524" layer="91"/>
-<label x="53.34" y="-22.86" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="FPGA_FMC_A24" class="0">
-<segment>
-<pinref part="U7" gate="B13" pin="IO_L13P_T2_MRCC_13"/>
-<wire x1="48.26" y1="-25.4" x2="78.74" y2="-25.4" width="0.1524" layer="91"/>
-<label x="53.34" y="-25.4" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="FPGA_FMC_CLK" class="0">
 <segment>
 <pinref part="U7" gate="B13" pin="IO_L12P_T1_MRCC_13"/>
-<wire x1="48.26" y1="-20.32" x2="73.66" y2="-20.32" width="0.1524" layer="91"/>
-<label x="53.34" y="-20.32" size="1.778" layer="95"/>
+<wire x1="48.26" y1="-20.32" x2="53.34" y2="-20.32" width="0.1524" layer="91"/>
+<label x="53.34" y="-20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D0" class="0">
+<net name="FMC_D0" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_0_34"/>
-<wire x1="-86.36" y1="45.72" x2="-55.88" y2="45.72" width="0.1524" layer="91"/>
-<label x="-81.28" y="45.72" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="45.72" x2="-86.36" y2="45.72" width="0.1524" layer="91"/>
+<label x="-73.66" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D1" class="0">
+<net name="FMC_D1" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L1P_T0_34"/>
-<wire x1="-86.36" y1="43.18" x2="-55.88" y2="43.18" width="0.1524" layer="91"/>
-<label x="-81.28" y="43.18" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="43.18" x2="-86.36" y2="43.18" width="0.1524" layer="91"/>
+<label x="-73.66" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D2" class="0">
+<net name="FMC_D2" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L1N_T0_34"/>
-<wire x1="-86.36" y1="40.64" x2="-55.88" y2="40.64" width="0.1524" layer="91"/>
-<label x="-81.28" y="40.64" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="40.64" x2="-86.36" y2="40.64" width="0.1524" layer="91"/>
+<label x="-73.66" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D3" class="0">
+<net name="FMC_D3" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L2P_T0_34"/>
-<wire x1="-86.36" y1="38.1" x2="-55.88" y2="38.1" width="0.1524" layer="91"/>
-<label x="-81.28" y="38.1" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="38.1" x2="-86.36" y2="38.1" width="0.1524" layer="91"/>
+<label x="-73.66" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D4" class="0">
+<net name="FMC_D4" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L2N_T0_34"/>
-<wire x1="-86.36" y1="35.56" x2="-55.88" y2="35.56" width="0.1524" layer="91"/>
-<label x="-81.28" y="35.56" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="35.56" x2="-86.36" y2="35.56" width="0.1524" layer="91"/>
+<label x="-73.66" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D5" class="0">
+<net name="FMC_D5" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L3P_T0_DQS_34"/>
-<wire x1="-86.36" y1="33.02" x2="-55.88" y2="33.02" width="0.1524" layer="91"/>
-<label x="-81.28" y="33.02" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="33.02" x2="-86.36" y2="33.02" width="0.1524" layer="91"/>
+<label x="-73.66" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D6" class="0">
+<net name="FMC_D6" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L3N_T0_DQS_34"/>
-<wire x1="-86.36" y1="30.48" x2="-55.88" y2="30.48" width="0.1524" layer="91"/>
-<label x="-81.28" y="30.48" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="30.48" x2="-86.36" y2="30.48" width="0.1524" layer="91"/>
+<label x="-73.66" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D7" class="0">
+<net name="FMC_D7" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L4P_T0_34"/>
-<wire x1="-86.36" y1="27.94" x2="-55.88" y2="27.94" width="0.1524" layer="91"/>
-<label x="-81.28" y="27.94" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="27.94" x2="-86.36" y2="27.94" width="0.1524" layer="91"/>
+<label x="-73.66" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D8" class="0">
+<net name="FMC_D8" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L4N_T0_34"/>
-<wire x1="-86.36" y1="25.4" x2="-55.88" y2="25.4" width="0.1524" layer="91"/>
-<label x="-81.28" y="25.4" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="25.4" x2="-86.36" y2="25.4" width="0.1524" layer="91"/>
+<label x="-73.66" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D9" class="0">
+<net name="FMC_D9" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L5P_T0_34"/>
-<wire x1="-86.36" y1="22.86" x2="-55.88" y2="22.86" width="0.1524" layer="91"/>
-<label x="-81.28" y="22.86" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="22.86" x2="-86.36" y2="22.86" width="0.1524" layer="91"/>
+<label x="-73.66" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D10" class="0">
+<net name="FMC_D10" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L5N_T0_34"/>
-<wire x1="-86.36" y1="20.32" x2="-55.88" y2="20.32" width="0.1524" layer="91"/>
-<label x="-81.28" y="20.32" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="20.32" x2="-86.36" y2="20.32" width="0.1524" layer="91"/>
+<label x="-73.66" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D11" class="0">
+<net name="FMC_D11" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L6P_T0_34"/>
-<wire x1="-86.36" y1="17.78" x2="-55.88" y2="17.78" width="0.1524" layer="91"/>
-<label x="-81.28" y="17.78" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="17.78" x2="-86.36" y2="17.78" width="0.1524" layer="91"/>
+<label x="-73.66" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D12" class="0">
+<net name="FMC_D12" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L6N_T0_VREF_34"/>
-<wire x1="-86.36" y1="15.24" x2="-55.88" y2="15.24" width="0.1524" layer="91"/>
-<label x="-81.28" y="15.24" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="15.24" x2="-86.36" y2="15.24" width="0.1524" layer="91"/>
+<label x="-73.66" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D13" class="0">
+<net name="FMC_D13" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L7P_T1_34"/>
-<wire x1="-86.36" y1="12.7" x2="-55.88" y2="12.7" width="0.1524" layer="91"/>
-<label x="-81.28" y="12.7" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="12.7" x2="-86.36" y2="12.7" width="0.1524" layer="91"/>
+<label x="-73.66" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D14" class="0">
+<net name="FMC_D14" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L7N_T1_34"/>
-<wire x1="-86.36" y1="10.16" x2="-55.88" y2="10.16" width="0.1524" layer="91"/>
-<label x="-81.28" y="10.16" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="10.16" x2="-86.36" y2="10.16" width="0.1524" layer="91"/>
+<label x="-73.66" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D15" class="0">
+<net name="FMC_D15" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L8P_T1_34"/>
-<wire x1="-86.36" y1="7.62" x2="-55.88" y2="7.62" width="0.1524" layer="91"/>
-<label x="-81.28" y="7.62" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="7.62" x2="-86.36" y2="7.62" width="0.1524" layer="91"/>
+<label x="-73.66" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D16" class="0">
+<net name="FMC_D16" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L8N_T1_34"/>
-<wire x1="-86.36" y1="5.08" x2="-55.88" y2="5.08" width="0.1524" layer="91"/>
-<label x="-81.28" y="5.08" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="5.08" x2="-86.36" y2="5.08" width="0.1524" layer="91"/>
+<label x="-73.66" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D17" class="0">
+<net name="FMC_D17" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L9P_T1_DQS_34"/>
-<wire x1="-86.36" y1="2.54" x2="-55.88" y2="2.54" width="0.1524" layer="91"/>
-<label x="-81.28" y="2.54" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="2.54" x2="-86.36" y2="2.54" width="0.1524" layer="91"/>
+<label x="-73.66" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D18" class="0">
+<net name="FMC_D18" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L9N_T1_DQS_34"/>
-<wire x1="-86.36" y1="0" x2="-55.88" y2="0" width="0.1524" layer="91"/>
-<label x="-81.28" y="0" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="0" x2="-86.36" y2="0" width="0.1524" layer="91"/>
+<label x="-73.66" y="0" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D19" class="0">
+<net name="FMC_D19" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L10P_T1_34"/>
-<wire x1="-86.36" y1="-2.54" x2="-55.88" y2="-2.54" width="0.1524" layer="91"/>
-<label x="-81.28" y="-2.54" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-2.54" x2="-86.36" y2="-2.54" width="0.1524" layer="91"/>
+<label x="-73.66" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D20" class="0">
+<net name="FMC_D20" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L10N_T1_34"/>
-<wire x1="-86.36" y1="-5.08" x2="-55.88" y2="-5.08" width="0.1524" layer="91"/>
-<label x="-81.28" y="-5.08" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-5.08" x2="-86.36" y2="-5.08" width="0.1524" layer="91"/>
+<label x="-73.66" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D21" class="0">
+<net name="FMC_D21" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L11P_T1_SRCC_34"/>
-<wire x1="-86.36" y1="-7.62" x2="-55.88" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-81.28" y="-7.62" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-7.62" x2="-86.36" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-73.66" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D22" class="0">
+<net name="FMC_D22" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L11N_T1_SRCC_34"/>
-<wire x1="-86.36" y1="-10.16" x2="-55.88" y2="-10.16" width="0.1524" layer="91"/>
-<label x="-81.28" y="-10.16" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-10.16" x2="-86.36" y2="-10.16" width="0.1524" layer="91"/>
+<label x="-73.66" y="-10.16" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D23" class="0">
+<net name="FMC_D23" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L12P_T1_MRCC_34"/>
-<wire x1="-86.36" y1="-12.7" x2="-55.88" y2="-12.7" width="0.1524" layer="91"/>
-<label x="-81.28" y="-12.7" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-12.7" x2="-86.36" y2="-12.7" width="0.1524" layer="91"/>
+<label x="-73.66" y="-12.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D24" class="0">
+<net name="FMC_D24" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L12N_T1_MRCC_34"/>
-<wire x1="-86.36" y1="-15.24" x2="-55.88" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-81.28" y="-15.24" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-15.24" x2="-86.36" y2="-15.24" width="0.1524" layer="91"/>
+<label x="-73.66" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D25" class="0">
+<net name="FMC_D25" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L13P_T2_MRCC_34"/>
-<wire x1="-86.36" y1="-17.78" x2="-55.88" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-81.28" y="-17.78" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-17.78" x2="-86.36" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-73.66" y="-17.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D26" class="0">
+<net name="FMC_D26" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L13N_T2_MRCC_34"/>
-<wire x1="-86.36" y1="-20.32" x2="-55.88" y2="-20.32" width="0.1524" layer="91"/>
-<label x="-81.28" y="-20.32" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-20.32" x2="-86.36" y2="-20.32" width="0.1524" layer="91"/>
+<label x="-73.66" y="-20.32" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D27" class="0">
+<net name="FMC_D27" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L14P_T2_SRCC_34"/>
-<wire x1="-86.36" y1="-22.86" x2="-55.88" y2="-22.86" width="0.1524" layer="91"/>
-<label x="-81.28" y="-22.86" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-22.86" x2="-86.36" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-73.66" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D28" class="0">
+<net name="FMC_D28" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L14N_T2_SRCC_34"/>
-<wire x1="-86.36" y1="-25.4" x2="-55.88" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-81.28" y="-25.4" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-25.4" x2="-86.36" y2="-25.4" width="0.1524" layer="91"/>
+<label x="-73.66" y="-25.4" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D29" class="0">
+<net name="FMC_D29" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L15P_T2_DQS_34"/>
-<wire x1="-86.36" y1="-27.94" x2="-55.88" y2="-27.94" width="0.1524" layer="91"/>
-<label x="-81.28" y="-27.94" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-27.94" x2="-86.36" y2="-27.94" width="0.1524" layer="91"/>
+<label x="-73.66" y="-27.94" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D30" class="0">
+<net name="FMC_D30" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L15N_T2_DQS_34"/>
-<wire x1="-86.36" y1="-30.48" x2="-55.88" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-81.28" y="-30.48" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-30.48" x2="-86.36" y2="-30.48" width="0.1524" layer="91"/>
+<label x="-73.66" y="-30.48" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_D31" class="0">
+<net name="FMC_D31" class="2">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L16P_T2_34"/>
-<wire x1="-86.36" y1="-33.02" x2="-55.88" y2="-33.02" width="0.1524" layer="91"/>
-<label x="-81.28" y="-33.02" size="1.778" layer="95"/>
+<wire x1="-55.88" y1="-33.02" x2="-86.36" y2="-33.02" width="0.1524" layer="91"/>
+<label x="-73.66" y="-33.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="FPGA_FMC_NE1" class="0">
+<net name="FMC_NE1" class="0">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L16N_T2_34"/>
-<wire x1="-86.36" y1="-35.56" x2="-60.96" y2="-35.56" width="0.1524" layer="91"/>
-<label x="-60.96" y="-35.56" size="1.778" layer="95" xref="yes"/>
+<wire x1="-53.34" y1="-35.56" x2="-86.36" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="FPGA_FMC_NL" class="0">
+<net name="FMC_NL" class="0">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L17P_T2_34"/>
-<wire x1="-86.36" y1="-38.1" x2="-60.96" y2="-38.1" width="0.1524" layer="91"/>
-<label x="-60.96" y="-38.1" size="1.778" layer="95" xref="yes"/>
+<wire x1="-53.34" y1="-38.1" x2="-86.36" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="FPGA_FMC_NOE" class="0">
+<net name="FMC_NOE" class="0">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L17N_T2_34"/>
-<wire x1="-86.36" y1="-40.64" x2="-60.96" y2="-40.64" width="0.1524" layer="91"/>
-<label x="-60.96" y="-40.64" size="1.778" layer="95" xref="yes"/>
+<wire x1="-53.34" y1="-40.64" x2="-86.36" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="FPGA_FMC_NWAIT" class="0">
+<net name="FMC_NWAIT" class="0">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L18P_T2_34"/>
-<wire x1="-86.36" y1="-43.18" x2="-60.96" y2="-43.18" width="0.1524" layer="91"/>
-<label x="-60.96" y="-43.18" size="1.778" layer="95" xref="yes"/>
+<wire x1="-53.34" y1="-43.18" x2="-86.36" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="FPGA_FMC_NWE" class="0">
+<net name="FMC_NWE" class="0">
 <segment>
 <pinref part="U7" gate="B34" pin="IO_L18N_T2_34"/>
-<wire x1="-86.36" y1="-45.72" x2="-60.96" y2="-45.72" width="0.1524" layer="91"/>
-<label x="-60.96" y="-45.72" size="1.778" layer="95" xref="yes"/>
+<wire x1="-53.34" y1="-45.72" x2="-86.36" y2="-45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="FMC_A0" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_0_13"/>
+<wire x1="78.74" y1="38.1" x2="48.26" y2="38.1" width="0.1524" layer="91"/>
+<label x="60.96" y="38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A1" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L1P_T0_13"/>
+<wire x1="78.74" y1="35.56" x2="48.26" y2="35.56" width="0.1524" layer="91"/>
+<label x="60.96" y="35.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A2" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L1N_T0_13"/>
+<wire x1="78.74" y1="33.02" x2="48.26" y2="33.02" width="0.1524" layer="91"/>
+<label x="60.96" y="33.02" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A3" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L2P_T0_13"/>
+<wire x1="78.74" y1="30.48" x2="48.26" y2="30.48" width="0.1524" layer="91"/>
+<label x="60.96" y="30.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A4" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L2N_T0_13"/>
+<wire x1="78.74" y1="27.94" x2="48.26" y2="27.94" width="0.1524" layer="91"/>
+<label x="60.96" y="27.94" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A5" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L3P_T0_DQS_13"/>
+<wire x1="78.74" y1="25.4" x2="48.26" y2="25.4" width="0.1524" layer="91"/>
+<label x="60.96" y="25.4" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A6" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L3N_T0_DQS_13"/>
+<wire x1="78.74" y1="22.86" x2="48.26" y2="22.86" width="0.1524" layer="91"/>
+<label x="60.96" y="22.86" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A7" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L4P_T0_13"/>
+<wire x1="78.74" y1="20.32" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
+<label x="60.96" y="20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A8" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L4N_T0_13"/>
+<wire x1="78.74" y1="17.78" x2="48.26" y2="17.78" width="0.1524" layer="91"/>
+<label x="60.96" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A9" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L5P_T0_13"/>
+<wire x1="78.74" y1="15.24" x2="48.26" y2="15.24" width="0.1524" layer="91"/>
+<label x="60.96" y="15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A10" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L5N_T0_13"/>
+<wire x1="78.74" y1="12.7" x2="48.26" y2="12.7" width="0.1524" layer="91"/>
+<label x="60.96" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A11" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L6P_T0_13"/>
+<wire x1="78.74" y1="10.16" x2="48.26" y2="10.16" width="0.1524" layer="91"/>
+<label x="60.96" y="10.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A12" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L6N_T0_VREF_13"/>
+<wire x1="78.74" y1="7.62" x2="48.26" y2="7.62" width="0.1524" layer="91"/>
+<label x="60.96" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A13" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L7P_T1_13"/>
+<wire x1="78.74" y1="5.08" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
+<label x="60.96" y="5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A14" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L7N_T1_13"/>
+<wire x1="78.74" y1="2.54" x2="48.26" y2="2.54" width="0.1524" layer="91"/>
+<label x="60.96" y="2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A15" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L8P_T1_13"/>
+<wire x1="78.74" y1="0" x2="48.26" y2="0" width="0.1524" layer="91"/>
+<label x="60.96" y="0" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A16" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L8N_T1_13"/>
+<wire x1="78.74" y1="-2.54" x2="48.26" y2="-2.54" width="0.1524" layer="91"/>
+<label x="60.96" y="-2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A17" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L9P_T1_DQS_13"/>
+<wire x1="78.74" y1="-5.08" x2="48.26" y2="-5.08" width="0.1524" layer="91"/>
+<label x="60.96" y="-5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A18" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L9N_T1_DQS_13"/>
+<wire x1="78.74" y1="-7.62" x2="48.26" y2="-7.62" width="0.1524" layer="91"/>
+<label x="60.96" y="-7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A19" class="3">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L10P_T1_13"/>
+<wire x1="78.74" y1="-10.16" x2="48.26" y2="-10.16" width="0.1524" layer="91"/>
+<label x="60.96" y="-10.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A20" class="0">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L10N_T1_13"/>
+<wire x1="78.74" y1="-12.7" x2="48.26" y2="-12.7" width="0.1524" layer="91"/>
+<label x="60.96" y="-12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A21" class="0">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L11P_T1_SRCC_13"/>
+<wire x1="78.74" y1="-15.24" x2="48.26" y2="-15.24" width="0.1524" layer="91"/>
+<label x="60.96" y="-15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A22" class="0">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L11N_T1_SRCC_13"/>
+<wire x1="78.74" y1="-17.78" x2="48.26" y2="-17.78" width="0.1524" layer="91"/>
+<label x="60.96" y="-17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FMC_A23" class="0">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L12N_T1_MRCC_13"/>
+<wire x1="78.74" y1="-22.86" x2="48.26" y2="-22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="FMC_A24" class="0">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L13P_T2_MRCC_13"/>
+<wire x1="78.74" y1="-25.4" x2="48.26" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="FMC_A25" class="0">
+<segment>
+<pinref part="U7" gate="B13" pin="IO_L13N_T2_MRCC_13"/>
+<wire x1="78.74" y1="-27.94" x2="48.26" y2="-27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -43953,8 +43927,8 @@ load of 100 Ohms just in case (gives 10 mA)</text>
 </net>
 <net name="FPGA_VCCINT_1V0" class="0">
 <segment>
-<wire x1="73.66" y1="10.16" x2="99.06" y2="10.16" width="0.1524" layer="91"/>
-<label x="76.2" y="10.16" size="1.778" layer="95"/>
+<wire x1="73.66" y1="10.16" x2="78.74" y2="10.16" width="0.1524" layer="91"/>
+<label x="78.74" y="10.16" size="1.778" layer="95" xref="yes"/>
 <pinref part="R53" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -43984,9 +43958,8 @@ load of 100 Ohms just in case (gives 10 mA)</text>
 </net>
 <net name="POK_VCCINT" class="0">
 <segment>
-<wire x1="5.08" y1="-55.88" x2="5.08" y2="-40.64" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="-55.88" x2="5.08" y2="-55.88" width="0.1524" layer="91"/>
-<label x="5.08" y="-53.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="2.54" y1="-55.88" x2="10.16" y2="-55.88" width="0.1524" layer="91"/>
+<label x="10.16" y="-55.88" size="1.778" layer="95" xref="yes"/>
 <pinref part="U$7" gate="G$1" pin="POK"/>
 </segment>
 </net>
@@ -44010,8 +43983,8 @@ load of 100 Ohms just in case (gives 10 mA)</text>
 <segment>
 <wire x1="-40.64" y1="0" x2="-50.8" y2="0" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="0" x2="-50.8" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="20.32" x2="-91.44" y2="20.32" width="0.1524" layer="91"/>
-<label x="-91.44" y="20.32" size="1.778" layer="95"/>
+<wire x1="-50.8" y1="20.32" x2="-63.5" y2="20.32" width="0.1524" layer="91"/>
+<label x="-63.5" y="20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="U$7" gate="G$1" pin="ENABLE"/>
 </segment>
 </net>
