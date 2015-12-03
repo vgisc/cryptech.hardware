@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="40" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
+<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="POWER" color="1" fill="3" visible="no" active="yes"/>
@@ -81,6 +81,7 @@
 <layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="113" name="IDFDebug" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="sName" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -132,6 +133,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="7" fill="1" visible="yes" active="yes"/>
@@ -3094,33 +3097,6 @@ EAGLE CAD Libraries on element14&lt;/a&gt;</description>
 </library>
 <library name="adafruit">
 <packages>
-<package name="CTS406">
-<description>&lt;b&gt;Model 406 6.0x3.5mm Low Cost Surface Mount Crystal&lt;/b&gt;&lt;p&gt;
-Source: 008-0260-0_E.pdf</description>
-<wire x1="-2.475" y1="1.65" x2="-1.05" y2="1.65" width="0.2032" layer="51"/>
-<wire x1="-1.05" y1="1.65" x2="1.05" y2="1.65" width="0.2032" layer="21"/>
-<wire x1="1.05" y1="1.65" x2="2.475" y2="1.65" width="0.2032" layer="51"/>
-<wire x1="2.9" y1="1.225" x2="2.9" y2="0.3" width="0.2032" layer="51"/>
-<wire x1="2.9" y1="0.3" x2="2.9" y2="-0.3" width="0.2032" layer="21"/>
-<wire x1="2.9" y1="-0.3" x2="2.9" y2="-1.225" width="0.2032" layer="51"/>
-<wire x1="2.475" y1="-1.65" x2="1.05" y2="-1.65" width="0.2032" layer="51"/>
-<wire x1="1.05" y1="-1.65" x2="-1.05" y2="-1.65" width="0.2032" layer="21"/>
-<wire x1="-1.05" y1="-1.65" x2="-2.475" y2="-1.65" width="0.2032" layer="51"/>
-<wire x1="-2.9" y1="-1.225" x2="-2.9" y2="-0.3" width="0.2032" layer="51"/>
-<wire x1="-2.9" y1="-0.3" x2="-2.9" y2="0.3" width="0.2032" layer="21"/>
-<wire x1="-2.9" y1="0.3" x2="-2.9" y2="1.225" width="0.2032" layer="51"/>
-<wire x1="-2.9" y1="1.225" x2="-2.475" y2="1.65" width="0.2032" layer="51" curve="89.516721"/>
-<wire x1="2.475" y1="1.65" x2="2.9" y2="1.225" width="0.2032" layer="51" curve="89.516721"/>
-<wire x1="2.9" y1="-1.225" x2="2.475" y2="-1.65" width="0.2032" layer="51" curve="89.516721"/>
-<wire x1="-2.475" y1="-1.65" x2="-2.9" y2="-1.225" width="0.2032" layer="51" curve="89.516721"/>
-<circle x="-2.05" y="-0.2" radius="0.182" width="0" layer="21"/>
-<smd name="1" x="-2.2" y="-1.2" dx="1.9" dy="1.4" layer="1"/>
-<smd name="2" x="2.2" y="-1.2" dx="1.9" dy="1.4" layer="1"/>
-<smd name="3" x="2.2" y="1.2" dx="1.9" dy="1.4" layer="1"/>
-<smd name="4" x="-2.2" y="1.2" dx="1.9" dy="1.4" layer="1"/>
-<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
-</package>
 <package name="USB-MINIB">
 <description>Surface Mount USB Mini-B Connector</description>
 <wire x1="3.9" y1="-1.24" x2="3.9" y2="2.86" width="0.127" layer="51"/>
@@ -3211,6 +3187,46 @@ Source: 008-0260-0_E.pdf</description>
 <text x="-3.31" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
 <hole x="-2.2" y="1" drill="1"/>
 <hole x="2.2" y="1" drill="1"/>
+</package>
+<package name="NX3225">
+<wire x1="-1.6" y1="1.2" x2="-1.6" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="-1.6" y1="-1.2" x2="1.6" y2="-1.2" width="0.127" layer="21"/>
+<wire x1="1.6" y1="-1.2" x2="1.6" y2="1.2" width="0.127" layer="21"/>
+<wire x1="1.6" y1="1.2" x2="-1.6" y2="1.2" width="0.127" layer="21"/>
+<wire x1="-1.4" y1="0.6825" x2="-1.0825" y2="1" width="0.127" layer="21" curve="-90"/>
+<wire x1="-1.0825" y1="1" x2="1.0825" y2="1" width="0.127" layer="21"/>
+<wire x1="1.0825" y1="1" x2="1.4" y2="0.6825" width="0.127" layer="21" curve="-90"/>
+<wire x1="1.4" y1="0.6825" x2="1.4" y2="-0.6825" width="0.127" layer="21"/>
+<wire x1="1.4" y1="-0.6825" x2="1.0825" y2="-1" width="0.127" layer="21" curve="-90"/>
+<wire x1="1.0825" y1="-1" x2="-1.0825" y2="-1" width="0.127" layer="21"/>
+<wire x1="-1.0825" y1="-1" x2="-1.4" y2="-0.6825" width="0.127" layer="21" curve="-90"/>
+<wire x1="-1.4" y1="-0.6825" x2="-1.4" y2="0.6825" width="0.127" layer="21"/>
+<smd name="4" x="-1.1" y="0.8" dx="1.2" dy="1.4" layer="1" rot="R90"/>
+<smd name="1" x="-1.1" y="-0.8" dx="1.2" dy="1.4" layer="1" rot="R90"/>
+<smd name="2" x="1.1" y="-0.8" dx="1.2" dy="1.4" layer="1" rot="R90"/>
+<smd name="3" x="1.1" y="0.8" dx="1.2" dy="1.4" layer="1" rot="R90"/>
+</package>
+<package name="XTAL3215">
+<wire x1="1.6" y1="-0.4172" x2="1.3172" y2="-0.7" width="0.127" layer="21" curve="-90"/>
+<wire x1="1.3172" y1="-0.7" x2="-1.3172" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="-1.3172" y1="-0.7" x2="-1.6" y2="-0.4172" width="0.127" layer="21" curve="-90"/>
+<wire x1="-1.6" y1="-0.4172" x2="-1.6" y2="0.4764" width="0.127" layer="21"/>
+<wire x1="-1.6" y1="0.4764" x2="-1.3764" y2="0.7" width="0.127" layer="21" curve="-90"/>
+<wire x1="-1.3764" y1="0.7" x2="1.2838" y2="0.7" width="0.127" layer="21"/>
+<wire x1="1.2838" y1="0.7" x2="1.6" y2="0.3838" width="0.127" layer="21" curve="-90"/>
+<wire x1="1.6" y1="0.3838" x2="1.6" y2="-0.4172" width="0.127" layer="21"/>
+<wire x1="-1.1" y1="0.4" x2="1" y2="0.4" width="0.127" layer="21"/>
+<wire x1="1" y1="0.4" x2="1.3" y2="0.1" width="0.127" layer="21" curve="-89.961816"/>
+<wire x1="1.3" y1="0.1" x2="1.3" y2="-0.1" width="0.127" layer="21"/>
+<wire x1="1.3" y1="-0.1" x2="1" y2="-0.4" width="0.127" layer="21" curve="-90"/>
+<wire x1="1" y1="-0.4" x2="-1" y2="-0.4" width="0.127" layer="21"/>
+<wire x1="-1" y1="-0.4" x2="-1.3" y2="-0.2" width="0.127" layer="21" curve="-90"/>
+<wire x1="-1.3" y1="-0.2" x2="-1.3" y2="0.1" width="0.127" layer="21"/>
+<wire x1="-1.3" y1="0.1" x2="-1.1" y2="0.4" width="0.127" layer="21" curve="-90.03821"/>
+<smd name="P$1" x="1.2" y="0" dx="1.1" dy="1.9" layer="1"/>
+<smd name="P$2" x="-1.2" y="0" dx="1.1" dy="1.9" layer="1" rot="R180"/>
+<text x="-2.3" y="-2.2" size="1.016" layer="25" font="vector">&gt;NAME</text>
+<text x="-2.6" y="1.2" size="1.016" layer="27" font="vector">&gt;VALUE</text>
 </package>
 </packages>
 </library>
@@ -3840,41 +3856,6 @@ EAGLE CAD Libraries on element14&lt;/a&gt;</description>
 <description>&lt;b&gt;Crystals and Crystal Resonators&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="TC26H">
-<description>&lt;b&gt;CRYSTAL&lt;/b&gt;</description>
-<wire x1="-0.889" y1="1.651" x2="0.889" y2="1.651" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="7.747" x2="1.016" y2="7.493" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.016" y1="7.493" x2="-0.762" y2="7.747" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-0.762" y1="7.747" x2="0.762" y2="7.747" width="0.1524" layer="21"/>
-<wire x1="0.889" y1="1.651" x2="0.889" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="2.032" x2="1.016" y2="7.493" width="0.1524" layer="21"/>
-<wire x1="-0.889" y1="1.651" x2="-0.889" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="-1.016" y1="2.032" x2="-0.889" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="-1.016" y1="2.032" x2="-1.016" y2="7.493" width="0.1524" layer="21"/>
-<wire x1="0.508" y1="0.762" x2="0.508" y2="1.143" width="0.4064" layer="21"/>
-<wire x1="-0.508" y1="0.762" x2="-0.508" y2="1.27" width="0.4064" layer="21"/>
-<wire x1="0.635" y1="0.635" x2="1.27" y2="0" width="0.4064" layer="51"/>
-<wire x1="-0.635" y1="0.635" x2="-1.27" y2="0" width="0.4064" layer="51"/>
-<wire x1="-0.508" y1="4.953" x2="-0.508" y2="4.572" width="0.1524" layer="21"/>
-<wire x1="0.508" y1="4.572" x2="-0.508" y2="4.572" width="0.1524" layer="21"/>
-<wire x1="0.508" y1="4.572" x2="0.508" y2="4.953" width="0.1524" layer="21"/>
-<wire x1="-0.508" y1="4.953" x2="0.508" y2="4.953" width="0.1524" layer="21"/>
-<wire x1="-0.508" y1="5.334" x2="0" y2="5.334" width="0.1524" layer="21"/>
-<wire x1="-0.508" y1="4.191" x2="0" y2="4.191" width="0.1524" layer="21"/>
-<wire x1="0" y1="4.191" x2="0" y2="3.683" width="0.1524" layer="21"/>
-<wire x1="0" y1="4.191" x2="0.508" y2="4.191" width="0.1524" layer="21"/>
-<wire x1="0" y1="5.334" x2="0" y2="5.842" width="0.1524" layer="21"/>
-<wire x1="0" y1="5.334" x2="0.508" y2="5.334" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="2.032" x2="0.889" y2="2.032" width="0.1524" layer="21"/>
-<wire x1="0.889" y1="2.032" x2="-0.889" y2="2.032" width="0.1524" layer="21"/>
-<pad name="1" x="-1.27" y="0" drill="0.8128"/>
-<pad name="2" x="1.27" y="0" drill="0.8128"/>
-<text x="-1.397" y="2.032" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="2.667" y="2.032" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
-<rectangle x1="0.3048" y1="1.016" x2="0.7112" y2="1.6002" layer="21"/>
-<rectangle x1="-0.7112" y1="1.016" x2="-0.3048" y2="1.6002" layer="21"/>
-<rectangle x1="-1.778" y1="0.762" x2="1.778" y2="8.382" layer="43"/>
-</package>
 <package name="ASF">
 <description>&lt;b&gt;CRYSTAL CLOCK OSCILLATORS&lt;/b&gt;&lt;p&gt;
 5.0 Vdc or 3.3 Vdc - LOW PROFILE ULTRA MINIATURE CERAMIC SURFACE MOUNT&lt;br&gt;
@@ -5286,23 +5267,15 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <attribute name="NAME" x="73.4568" y="39.7256" size="1.016" layer="25" ratio="10" rot="SR90"/>
 <attribute name="VALUE" x="71.9328" y="39.7256" size="1.016" layer="27" ratio="10" rot="SR90"/>
 </element>
-<element name="Q1" library="adafruit" package="CTS406" value="25MHz" x="94.2312" y="24.92" smashed="yes">
-<attribute name="OC_NEWARK" value="unknown" x="94.2312" y="24.92" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="94.2312" y="24.92" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="" x="94.2312" y="24.92" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="94.2312" y="24.92" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="96.2632" y="21.6688" size="0.8128" layer="25"/>
-<attribute name="VALUE" x="96.2632" y="20.8052" size="0.4064" layer="27"/>
+<element name="C14" library="rcl" package="C0603" value="5 pF" x="96.52" y="25.4" smashed="yes" rot="R90">
+<attribute name="NAME" x="96.7514" y="27.337" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="97.377" y="27.2514" size="0.4064" layer="27" rot="R90"/>
+<attribute name="DIELECTRIC" value="C0G" x="96.52" y="25.4" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C14" library="rcl" package="C0603" value="10 pF" x="94.008" y="27.7904" smashed="yes">
-<attribute name="NAME" x="95.945" y="27.559" size="0.8128" layer="25"/>
-<attribute name="VALUE" x="95.8594" y="26.9334" size="0.4064" layer="27"/>
-<attribute name="DIELECTRIC" value="C0G" x="94.008" y="27.7904" size="1.778" layer="27" display="off"/>
-</element>
-<element name="C15" library="rcl" package="C0603" value="10 pF" x="92.7888" y="21.7904" smashed="yes" rot="R180">
-<attribute name="NAME" x="90.6806" y="22.9842" size="0.8128" layer="25" rot="R180"/>
-<attribute name="VALUE" x="90.6806" y="21.8666" size="0.4064" layer="27" rot="R180"/>
-<attribute name="DIELECTRIC" value="C0G" x="92.7888" y="21.7904" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="C15" library="rcl" package="C0603" value="5 pF" x="90.424" y="25.4" smashed="yes" rot="R270">
+<attribute name="NAME" x="89.2302" y="23.2918" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="90.3478" y="23.2918" size="0.4064" layer="27" rot="R270"/>
+<attribute name="DIELECTRIC" value="C0G" x="90.424" y="25.4" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U$2" library="STM32-SWD-connector" package="100MIL_THT" value="STM32-SWD" x="118.5672" y="61.496" smashed="yes" rot="R180">
 <attribute name="NAME" x="118.0592" y="52.86" size="0.8128" layer="25" rot="R90"/>
@@ -5361,11 +5334,11 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <attribute name="DIELECTRIC" value="X7R" x="75.819" y="35.4584" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="RATED_VOLTAGE" value="50V" x="75.819" y="35.4584" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="C25" library="microbuilder" package="0603" value="0.1uF" x="79.248" y="31.3436" smashed="yes" rot="MR0">
+<element name="C25" library="microbuilder" package="0603" value="0.1 uF" x="79.248" y="31.3436" smashed="yes" rot="MR0">
 <attribute name="NAME" x="79.6036" y="29.3878" size="0.8128" layer="26" font="vector" ratio="18" rot="MR0"/>
 <attribute name="VALUE" x="79.6036" y="28.7528" size="0.4064" layer="28" font="vector" ratio="10" rot="MR0"/>
 <attribute name="DIELECTRIC" value="X7R" x="79.248" y="31.3436" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="RATED_VOLTAGE" value="50V" x="79.248" y="31.3436" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="RATED_VOLTAGE" value="10V" x="79.248" y="31.3436" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 <element name="C26" library="microbuilder" package="0603" value="0.1uF" x="75.5904" y="44.4272" smashed="yes" rot="MR0">
 <attribute name="NAME" x="76.5556" y="45.5194" size="0.8128" layer="26" font="vector" ratio="18" rot="MR0"/>
@@ -5379,17 +5352,17 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <attribute name="DIELECTRIC" value="X7R" x="75.5904" y="51.7424" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="RATED_VOLTAGE" value="50V" x="75.5904" y="51.7424" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="C28" library="microbuilder" package="0603" value="0.1uF" x="74.9808" y="56.8478" smashed="yes" rot="MR270">
+<element name="C28" library="microbuilder" package="0603" value="0.1 uF" x="74.9808" y="56.8478" smashed="yes" rot="MR270">
 <attribute name="NAME" x="73.886" y="54.7116" size="0.8128" layer="26" font="vector" ratio="18" rot="MR180"/>
 <attribute name="VALUE" x="71.7524" y="55.0418" size="0.4064" layer="28" font="vector" ratio="10" rot="MR180"/>
 <attribute name="DIELECTRIC" value="X7R" x="74.9808" y="56.8478" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="RATED_VOLTAGE" value="50V" x="74.9808" y="56.8478" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="RATED_VOLTAGE" value="10V" x="74.9808" y="56.8478" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="C29" library="microbuilder" package="0603" value="0.1uF" x="80.01" y="59.5376" smashed="yes" rot="MR180">
+<element name="C29" library="microbuilder" package="0603" value="0.1 uF" x="80.01" y="59.5376" smashed="yes" rot="MR180">
 <attribute name="NAME" x="79.0448" y="61.4934" size="0.8128" layer="26" font="vector" ratio="18" rot="MR180"/>
 <attribute name="VALUE" x="79.3496" y="62.4332" size="0.4064" layer="28" font="vector" ratio="10" rot="MR180"/>
 <attribute name="DIELECTRIC" value="X7R" x="80.01" y="59.5376" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="RATED_VOLTAGE" value="50V" x="80.01" y="59.5376" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="RATED_VOLTAGE" value="10V" x="80.01" y="59.5376" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="C31" library="microbuilder" package="0603" value="0.1uF" x="87.0204" y="59.8424" smashed="yes" rot="MR180">
 <attribute name="NAME" x="85.7504" y="61.7982" size="0.8128" layer="26" font="vector" ratio="18" rot="MR180"/>
@@ -5464,9 +5437,9 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <attribute name="NAME" x="89.9668" y="37.5946" size="0.8128" layer="26" font="vector" ratio="18" rot="MR0"/>
 <attribute name="VALUE" x="89.662" y="38.7884" size="0.4064" layer="28" font="vector" ratio="10" rot="MR0"/>
 </element>
-<element name="R12" library="resistor" package="R0603" value="0" x="90.0912" y="24.7904" smashed="yes" rot="R270">
-<attribute name="NAME" x="88.507" y="25.7782" size="0.8128" layer="25" rot="R270"/>
-<attribute name="VALUE" x="87.8814" y="25.1206" size="0.4064" layer="27" rot="R270"/>
+<element name="R12" library="resistor" package="R0603" value="0" x="91.186" y="28.448" smashed="yes" rot="R180">
+<attribute name="NAME" x="92.1738" y="30.0322" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="91.5162" y="30.6578" size="0.4064" layer="27" rot="R180"/>
 </element>
 <element name="C41" library="microbuilder" package="0603" value="0.1 uF" x="114.3" y="5.588" smashed="yes">
 <attribute name="NAME" x="117.602" y="5.1562" size="0.8128" layer="25" font="vector" ratio="18"/>
@@ -5557,19 +5530,19 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <attribute name="DIELECTRIC" value="X7R" x="95.1368" y="12.1512" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="RATED_VOLTAGE" value="10V" x="95.1368" y="12.1512" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C53" library="microbuilder" package="0603" value="0.1uF" x="109.812" y="12.9224" smashed="yes" rot="MR90">
+<element name="C53" library="microbuilder" package="0603" value="0.1 uF" x="109.812" y="12.9224" smashed="yes" rot="MR90">
 <attribute name="NAME" x="110.9788" y="14.9938" size="0.8128" layer="26" font="vector" ratio="18" rot="MR0"/>
 <attribute name="VALUE" x="110.674" y="16.1876" size="0.4064" layer="28" font="vector" ratio="10" rot="MR0"/>
 <attribute name="RATED_VOLTAGE" value="10V" x="109.812" y="12.9224" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="DIELECTRIC" value="X7R" x="109.812" y="12.9224" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="C54" library="microbuilder" package="0603" value="0.1uF" x="101.5824" y="7.7408" smashed="yes" rot="MR90">
+<element name="C54" library="microbuilder" package="0603" value="0.1 uF" x="101.5824" y="7.7408" smashed="yes" rot="MR90">
 <attribute name="NAME" x="101.1506" y="9.5188" size="0.8128" layer="26" font="vector" ratio="18" rot="MR90"/>
 <attribute name="VALUE" x="102.6492" y="6.4708" size="0.4064" layer="28" font="vector" ratio="10" rot="MR90"/>
 <attribute name="RATED_VOLTAGE" value="10V" x="101.5824" y="7.7408" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="DIELECTRIC" value="X7R" x="101.5824" y="7.7408" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="C55" library="microbuilder" package="0603" value="0.1uF" x="103.3464" y="14.3432" smashed="yes" rot="MR180">
+<element name="C55" library="microbuilder" package="0603" value="0.1 uF" x="103.3464" y="14.3432" smashed="yes" rot="MR180">
 <attribute name="NAME" x="99.0284" y="15.0798" size="0.8128" layer="26" font="vector" ratio="18" rot="MR180"/>
 <attribute name="VALUE" x="99.3332" y="13.886" size="0.4064" layer="28" font="vector" ratio="10" rot="MR180"/>
 <attribute name="RATED_VOLTAGE" value="10V" x="103.3464" y="14.3432" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -5697,21 +5670,13 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <attribute name="NAME" x="84.3026" y="6.2738" size="0.8128" layer="25" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="82.7024" y="13.081" size="0.4064" layer="27" ratio="10" rot="SR0"/>
 </element>
-<element name="Q2" library="crystal" package="TC26H" value="32768" x="85.0392" y="14.732" smashed="yes">
-<attribute name="MF" value="" x="78.3336" y="24.4856" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="78.3336" y="24.4856" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="78.3336" y="24.4856" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="78.3336" y="24.4856" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="83.0326" y="20.7264" size="1.27" layer="25" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="82.8294" y="18.5928" size="0.4064" layer="27" ratio="10" rot="R90"/>
-</element>
 <element name="C63" library="rcl" package="C0603" value="5pF" x="88.392" y="15.6464" smashed="yes" rot="R270">
 <attribute name="NAME" x="90.5002" y="17.4498" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="87.249" y="15.9258" size="0.4064" layer="27" rot="R90"/>
+<attribute name="VALUE" x="86.995" y="16.6878" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="C64" library="rcl" package="C0603" value="5pF" x="81.9912" y="15.6464" smashed="yes" rot="R270">
 <attribute name="NAME" x="81.3562" y="17.4498" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="80.8482" y="14.7066" size="0.4064" layer="27" rot="R90"/>
+<attribute name="VALUE" x="83.6422" y="16.7386" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="FID13" library="UsedComponents" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="21.6408" y="8.636"/>
 <element name="FID14" library="UsedComponents" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="2.032" y="5.08" rot="R90"/>
@@ -5760,9 +5725,6 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 </element>
 <element name="LED11" library="led" package="CHIP-LED0603" value="" x="14.224" y="45.72" rot="R90"/>
 <element name="LED12" library="led" package="CHIP-LED0603" value="" x="14.224" y="46.736" rot="R90"/>
-<element name="R22" library="resistor" package="R0603" value="330" x="17.272" y="43.688">
-<attribute name="TOLERANCE" value="5%" x="-88.1888" y="95.8088" size="1.778" layer="27" display="off"/>
-</element>
 <element name="LED13" library="led" package="CHIP-LED0603" value="" x="14.224" y="47.752" rot="R90"/>
 <element name="LED14" library="led" package="CHIP-LED0603" value="" x="14.224" y="48.768" rot="R90"/>
 <element name="R23" library="resistor" package="R0603" value="1.0k" x="5.08" y="44.704">
@@ -5807,15 +5769,6 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <element name="Q6" library="transistors_gaui" package="SOT23" value="2N7002" x="5.08" y="26.416"/>
 <element name="R29" library="resistor" package="R0603" value="4.7k" x="14.224" y="26.416">
 <attribute name="TOLERANCE" value="5%" x="-65.3288" y="13.0048" size="1.778" layer="27" display="off"/>
-</element>
-<element name="R30" library="resistor" package="R0603" value="330" x="17.272" y="45.72">
-<attribute name="TOLERANCE" value="5%" x="-115.9256" y="27.432" size="1.778" layer="27" display="off"/>
-</element>
-<element name="R31" library="resistor" package="R0603" value="330" x="17.272" y="47.752">
-<attribute name="TOLERANCE" value="5%" x="-120.8024" y="24.5872" size="1.778" layer="27" display="off"/>
-</element>
-<element name="R32" library="resistor" package="R0603" value="330" x="17.272" y="49.784">
-<attribute name="TOLERANCE" value="5%" x="-125.6792" y="21.7424" size="1.778" layer="27" display="off"/>
 </element>
 <element name="LED15" library="led" package="CHIP-LED0603" value="R" x="8.128" y="37.592" rot="R90"/>
 <element name="R33" library="resistor" package="R0603" value="330" x="11.176" y="37.592">
@@ -6493,6 +6446,25 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <attribute name="SF_ID" value="PRT-12748" x="129.032" y="4.064" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="PROD_ID" value="CONN-08106" x="129.032" y="4.064" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
+<element name="Q4" library="adafruit" package="NX3225" value="" x="93.472" y="25.4">
+<attribute name="MPN" value="ABM8G-25.000MHZ-4Y-T3" x="93.472" y="25.4" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="2467848" x="93.472" y="25.4" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R3" library="Panasonic-EXB-ERJ" package="RESCAXE80P320X160X60-8N" value="330R" x="17.526" y="47.244">
+<attribute name="POWERRATING" value="0.063 W/element" x="17.526" y="47.244" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="2060095 " x="17.526" y="47.244" size="1.778" layer="27" display="off"/>
+<attribute name="SUPPLIER" value="PANASONIC " x="17.526" y="47.244" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="65T9098 " x="17.526" y="47.244" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="EXB38V331JV" x="17.526" y="47.244" size="1.778" layer="27" display="off"/>
+<attribute name="TOLERANCE" value="±5 %" x="17.526" y="47.244" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="0603" x="17.526" y="47.244" size="1.778" layer="27" display="off"/>
+</element>
+<element name="X1" library="adafruit" package="XTAL3215" value="" x="85.09" y="15.24" smashed="yes" rot="R180">
+<attribute name="NAME" x="86.12" y="17.694" size="1.016" layer="25" font="vector" rot="R180"/>
+<attribute name="VALUE" x="87.69" y="14.04" size="1.016" layer="27" font="vector" rot="R180"/>
+<attribute name="MPN" value="ABS07-32.768KHZ-T" x="85.09" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="2101347" x="85.09" y="15.24" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND" class="1">
@@ -6679,10 +6651,7 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <wire x1="115.15" y1="5.588" x2="117.0432" y2="5.588" width="0.6096" layer="16"/>
 <wire x1="115.15" y1="7.7216" x2="117.0432" y2="7.7216" width="0.6096" layer="16"/>
 <wire x1="115.15" y1="9.8552" x2="117.0432" y2="9.8552" width="0.6096" layer="16"/>
-<via x="95.0976" y="21.7424" extent="1-16" drill="0.6" shape="square"/>
-<via x="91.7448" y="27.8384" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="93.6388" y1="21.7904" x2="95.0496" y2="21.7904" width="0.3048" layer="1"/>
-<wire x1="95.0496" y1="21.7904" x2="95.0976" y2="21.7424" width="0.3048" layer="1"/>
+<via x="96.52" y="23.114" extent="1-16" drill="0.6" shape="square"/>
 <contactref element="U$2" pad="P$GND"/>
 <wire x1="111.1876" y1="21.4376" x2="112.776" y2="21.4376" width="0.4064" layer="1"/>
 <wire x1="114.6048" y1="18.9992" x2="113.2168" y2="18.9992" width="0.4064" layer="1"/>
@@ -6815,8 +6784,6 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <via x="88.392" y="18.0848" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="81.9912" y1="16.4964" x2="81.9912" y2="18.0848" width="0.4064" layer="1"/>
 <wire x1="88.392" y1="16.4964" x2="88.392" y2="18.0848" width="0.4064" layer="1"/>
-<wire x1="93.158" y1="27.7904" x2="91.7928" y2="27.7904" width="0.3048" layer="1"/>
-<wire x1="91.7928" y1="27.7904" x2="91.7448" y2="27.8384" width="0.3048" layer="1"/>
 <wire x1="102.3116" y1="31.138" x2="102.3116" y2="29.898" width="0.3048" layer="1"/>
 <wire x1="102.3116" y1="29.898" x2="102.7176" y2="29.492" width="0.3048" layer="1"/>
 <polygon width="0.3048" layer="1">
@@ -7164,6 +7131,8 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <contactref element="JP1" pad="P$4"/>
 <contactref element="T2" pad="2"/>
 <contactref element="C3" pad="1"/>
+<contactref element="Q4" pad="4"/>
+<contactref element="Q4" pad="2"/>
 <wire x1="156.298" y1="99.568" x2="151.55" y2="99.568" width="0" layer="19" extent="1-1"/>
 <wire x1="156.3996" y1="95.1992" x2="156.298" y2="99.568" width="0" layer="19" extent="1-1"/>
 <wire x1="147.5928" y1="93.7144" x2="151.55" y2="99.568" width="0" layer="19" extent="1-1"/>
@@ -7241,6 +7210,10 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <wire x1="134.732" y1="10.164" x2="137.326" y2="9.144" width="0" layer="19" extent="1-1"/>
 <wire x1="137.326" y1="13.208" x2="134.732" y2="10.164" width="0" layer="19" extent="1-1"/>
 <wire x1="116.7738" y1="42.3092" x2="131.4528" y2="46.4668" width="0" layer="19" extent="1-1"/>
+<wire x1="96.52" y1="24.55" x2="96.52" y2="23.114" width="0" layer="19" extent="1-1"/>
+<wire x1="94.572" y1="24.6" x2="96.52" y2="24.55" width="0" layer="19" extent="1-1"/>
+<wire x1="92.372" y1="26.2" x2="94.572" y2="24.6" width="0" layer="19" extent="1-1"/>
+<wire x1="90.424" y1="26.25" x2="92.372" y2="26.2" width="0" layer="19" extent="1-1"/>
 <wire x1="47.2248" y1="27.0684" x2="51.7984" y2="27.916" width="0" layer="19" extent="1-1"/>
 <wire x1="45.834" y1="28.916" x2="47.2248" y2="27.0684" width="0" layer="19" extent="1-1"/>
 <wire x1="35.688" y1="28.71" x2="45.834" y2="28.916" width="0" layer="19" extent="1-1"/>
@@ -8518,28 +8491,18 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <wire x1="43.0808" y1="64.2088" x2="69.2376" y2="45.3416" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OSC_OUT">
-<contactref element="Q1" pad="3"/>
 <contactref element="C14" pad="2"/>
 <contactref element="U$1" pad="33"/>
-<wire x1="96.1072" y1="26.444" x2="96.4312" y2="26.12" width="0.3048" layer="1"/>
-<wire x1="96.7812" y1="25.77" x2="96.4312" y2="26.12" width="0.4064" layer="1"/>
 <wire x1="93.32" y1="31.138" x2="93.32" y2="29.9208" width="0.3048" layer="1"/>
-<wire x1="93.32" y1="29.9208" x2="94.7928" y2="28.448" width="0.3048" layer="1"/>
-<wire x1="94.7928" y1="28.448" x2="94.7928" y2="27.8556" width="0.3048" layer="1"/>
-<wire x1="94.7928" y1="27.8556" x2="94.858" y2="27.7904" width="0.3048" layer="1"/>
-<wire x1="94.858" y1="27.7904" x2="96.06" y2="27.7904" width="0.4064" layer="1"/>
-<wire x1="96.06" y1="27.7904" x2="96.6216" y2="27.2288" width="0.4064" layer="1"/>
-<wire x1="96.6216" y1="27.2288" x2="96.6216" y2="26.3104" width="0.4064" layer="1"/>
-<wire x1="96.6216" y1="26.3104" x2="96.4312" y2="26.12" width="0.4064" layer="1"/>
+<contactref element="Q4" pad="3"/>
+<wire x1="94.572" y1="26.2" x2="96.52" y2="26.25" width="0" layer="19" extent="1-1"/>
+<wire x1="93.32" y1="29.9208" x2="94.572" y2="26.2" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OSC_IN">
 <contactref element="U$1" pad="32"/>
 <contactref element="R12" pad="1"/>
 <wire x1="92.812" y1="31.138" x2="92.812" y2="29.82" width="0.3048" layer="1"/>
-<wire x1="92.812" y1="29.82" x2="92.0496" y2="29.0576" width="0.3048" layer="1"/>
-<wire x1="92.0496" y1="29.0576" x2="91.44" y2="29.0576" width="0.3048" layer="1"/>
-<wire x1="91.44" y1="29.0576" x2="90.0912" y2="27.7088" width="0.3048" layer="1"/>
-<wire x1="90.0912" y1="25.6404" x2="90.0912" y2="27.7088" width="0.3048" layer="1"/>
+<wire x1="92.812" y1="29.82" x2="92.036" y2="28.448" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SWDIO">
 <contactref element="U$2" pad="P$SWDIO"/>
@@ -8621,13 +8584,11 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <wire x1="107.5156" y1="3.4992" x2="107.4772" y2="3.156" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$21">
-<contactref element="Q1" pad="1"/>
 <contactref element="C15" pad="2"/>
 <contactref element="R12" pad="2"/>
-<wire x1="92.0312" y1="23.72" x2="92.0312" y2="22.0028" width="0.3048" layer="1"/>
-<wire x1="92.0312" y1="22.0028" x2="91.9388" y2="21.7904" width="0.3048" layer="1"/>
-<wire x1="92.0312" y1="23.72" x2="90.3116" y2="23.72" width="0.4064" layer="1"/>
-<wire x1="90.3116" y1="23.72" x2="90.0912" y2="23.9404" width="0.4064" layer="1"/>
+<contactref element="Q4" pad="1"/>
+<wire x1="90.424" y1="24.55" x2="90.336" y2="28.448" width="0" layer="19" extent="1-1"/>
+<wire x1="92.372" y1="24.6" x2="90.424" y2="24.55" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FT_VCCA">
 <contactref element="U$3" pad="37"/>
@@ -8648,28 +8609,15 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 </signal>
 <signal name="USB_DP">
 <contactref element="U$3" pad="7"/>
-<wire x1="105.5156" y1="25.4548" x2="105.5156" y2="14.7148" width="0.3048" layer="1"/>
+<wire x1="105.5156" y1="21.3908" x2="105.5156" y2="14.7148" width="0.3048" layer="1"/>
 <contactref element="CN1" pad="D+"/>
-<wire x1="112.4864" y1="28.9264" x2="108.9872" y2="28.9264" width="0.3048" layer="1"/>
-<wire x1="105.5156" y1="25.4548" x2="108.9872" y2="28.9264" width="0" layer="19" extent="1-1"/>
+<wire x1="105.5156" y1="21.3908" x2="112.4864" y2="28.9264" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="USB_DM">
 <contactref element="U$3" pad="6"/>
 <wire x1="106.0156" y1="14.7148" x2="106.0156" y2="20.8503" width="0.3048" layer="1"/>
-<wire x1="106.0156" y1="20.8503" x2="106.32675" y2="21.16145" width="0.3048" layer="1" curve="-90"/>
-<wire x1="106.32675" y1="21.16145" x2="106.576509375" y2="21.16145" width="0.3048" layer="1"/>
-<wire x1="106.576509375" y1="21.16145" x2="106.887659375" y2="21.4726" width="0.3048" layer="1" curve="90"/>
-<wire x1="106.887659375" y1="21.4726" x2="106.887659375" y2="21.7297" width="0.3048" layer="1"/>
-<wire x1="106.887659375" y1="21.7297" x2="106.576509375" y2="22.04085" width="0.3048" layer="1" curve="90"/>
-<wire x1="106.576509375" y1="22.04085" x2="106.32675" y2="22.04085" width="0.3048" layer="1"/>
-<wire x1="106.32675" y1="22.04085" x2="106.0156" y2="22.352" width="0.3048" layer="1" curve="-90"/>
-<wire x1="106.0156" y1="22.352" x2="106.0156" y2="23.5164" width="0.3048" layer="1"/>
-<wire x1="107.2896" y1="24.1808" x2="106.68" y2="24.1808" width="0.3048" layer="1"/>
-<wire x1="106.68" y1="24.1808" x2="106.0156" y2="23.5164" width="0.3048" layer="1"/>
 <contactref element="CN1" pad="D-"/>
-<wire x1="112.4864" y1="28.1264" x2="111.0828" y2="28.1264" width="0.3048" layer="1"/>
-<wire x1="111.0828" y1="28.1264" x2="109.0476125" y2="26.0912125" width="0.3048" layer="1"/>
-<wire x1="107.2896" y1="24.1808" x2="109.0476125" y2="26.0912125" width="0" layer="19" extent="1-1"/>
+<wire x1="106.0156" y1="20.8503" x2="112.4864" y2="28.1264" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FT_VREGIN">
 <contactref element="U$3" pad="40"/>
@@ -9121,7 +9069,6 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <signal name="AVR_PANIC">
 <contactref element="U3" pad="11"/>
 <contactref element="U$4" pad="A2"/>
-<contactref element="U$4" pad="A1"/>
 <wire x1="28.7388" y1="3.4544" x2="28.7176" y2="3.4332" width="0.4064" layer="1"/>
 <wire x1="71.1454" y1="11.7094" x2="65.2526" y2="11.7094" width="0.4064" layer="1"/>
 <wire x1="65.2526" y1="11.7094" x2="64.6176" y2="11.0744" width="0.4064" layer="1"/>
@@ -9134,9 +9081,6 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <wire x1="28.7388" y1="3.4544" x2="52.7304" y2="3.4544" width="0.4064" layer="1"/>
 <via x="52.7304" y="3.4544" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="28.7176" y1="3.4332" x2="28.6724" y2="3.4332" width="0.4064" layer="1"/>
-<wire x1="28.6724" y1="3.4332" x2="27.432" y2="4.6736" width="0.4064" layer="1"/>
-<wire x1="27.432" y1="4.6736" x2="25.558" y2="4.6736" width="0.4064" layer="1"/>
-<wire x1="25.558" y1="4.6736" x2="24.3176" y2="3.4332" width="0.4064" layer="1"/>
 </signal>
 <signal name="3V3_BATT">
 <contactref element="C62" pad="1"/>
@@ -9229,26 +9173,21 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <signal name="RTC_X1">
 <contactref element="U6" pad="1"/>
 <contactref element="C64" pad="2"/>
-<contactref element="Q2" pad="1"/>
-<wire x1="83.7692" y1="14.732" x2="83.7692" y2="12.2428" width="0.4064" layer="1"/>
-<wire x1="83.7692" y1="12.2428" x2="83.5152" y2="11.9888" width="0.4064" layer="1"/>
 <wire x1="83.5152" y1="11.9888" x2="82.7532" y2="11.9888" width="0.4064" layer="1"/>
 <wire x1="82.7532" y1="11.9888" x2="82.677" y2="12.065" width="0.4064" layer="1"/>
-<wire x1="83.7692" y1="14.732" x2="82.0556" y2="14.732" width="0.4064" layer="1"/>
 <wire x1="82.0556" y1="14.732" x2="81.9912" y2="14.7964" width="0.4064" layer="1"/>
+<contactref element="X1" pad="P$1"/>
+<wire x1="82.0556" y1="14.732" x2="83.89" y2="15.24" width="0" layer="19" extent="1-1"/>
+<wire x1="82.677" y1="12.065" x2="82.0556" y2="14.732" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RTC_X2">
 <contactref element="U6" pad="2"/>
 <contactref element="C63" pad="2"/>
-<contactref element="Q2" pad="2"/>
-<wire x1="86.3092" y1="14.732" x2="86.2584" y2="14.732" width="0.4064" layer="1"/>
-<wire x1="86.2584" y1="14.732" x2="84.7344" y2="13.208" width="0.4064" layer="1"/>
-<wire x1="84.7344" y1="13.208" x2="84.7344" y2="11.3792" width="0.4064" layer="1"/>
-<wire x1="84.7344" y1="11.3792" x2="84.1248" y2="10.7696" width="0.4064" layer="1"/>
-<wire x1="84.1248" y1="10.7696" x2="82.7024" y2="10.7696" width="0.4064" layer="1"/>
 <wire x1="82.7024" y1="10.7696" x2="82.677" y2="10.795" width="0.4064" layer="1"/>
-<wire x1="86.3092" y1="14.732" x2="88.3276" y2="14.732" width="0.4064" layer="1"/>
 <wire x1="88.3276" y1="14.732" x2="88.392" y2="14.7964" width="0.4064" layer="1"/>
+<contactref element="X1" pad="P$2"/>
+<wire x1="86.29" y1="15.24" x2="88.3276" y2="14.732" width="0" layer="19" extent="1-1"/>
+<wire x1="82.677" y1="10.795" x2="86.29" y2="15.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RTC_MFP">
 <contactref element="U6" pad="7"/>
@@ -9797,13 +9736,13 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 </signal>
 <signal name="FPGA_GPIO_LED_2">
 <contactref element="U7" pad="W22"/>
-<contactref element="R31" pad="2"/>
-<wire x1="18.122" y1="47.752" x2="42.0808" y2="47.2088" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="2"/>
+<wire x1="16.764" y1="47.6758" x2="42.0808" y2="47.2088" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FPGA_GPIO_LED_3">
 <contactref element="U7" pad="AA20"/>
-<contactref element="R32" pad="2"/>
-<wire x1="18.122" y1="49.784" x2="40.0808" y2="49.2088" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="1"/>
+<wire x1="16.764" y1="48.768" x2="40.0808" y2="49.2088" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FPGA_M2">
 <contactref element="U7" pad="U9"/>
@@ -9866,33 +9805,33 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 </signal>
 <signal name="FPGA_GPIO_LED_0">
 <contactref element="U7" pad="T20"/>
-<contactref element="R22" pad="2"/>
-<wire x1="18.122" y1="43.688" x2="45.0808" y2="49.2088" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="4"/>
+<wire x1="16.764" y1="45.72" x2="45.0808" y2="49.2088" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FPGA_GPIO_LED_1">
 <contactref element="U7" pad="W21"/>
-<contactref element="R30" pad="2"/>
-<wire x1="18.122" y1="45.72" x2="42.0808" y2="48.2088" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="3"/>
+<wire x1="16.764" y1="46.8122" x2="42.0808" y2="48.2088" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$27">
 <contactref element="LED11" pad="A"/>
-<contactref element="R22" pad="1"/>
-<wire x1="16.422" y1="43.688" x2="14.974" y2="45.72" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="5"/>
+<wire x1="14.974" y1="45.72" x2="18.288" y2="45.72" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$28">
 <contactref element="LED12" pad="A"/>
-<contactref element="R30" pad="1"/>
-<wire x1="14.974" y1="46.736" x2="16.422" y2="45.72" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="6"/>
+<wire x1="14.974" y1="46.736" x2="18.288" y2="46.8122" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$29">
 <contactref element="LED13" pad="A"/>
-<contactref element="R31" pad="1"/>
-<wire x1="14.974" y1="47.752" x2="16.422" y2="47.752" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="7"/>
+<wire x1="14.974" y1="47.752" x2="18.288" y2="47.6758" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$30">
 <contactref element="LED14" pad="A"/>
-<contactref element="R32" pad="1"/>
-<wire x1="14.974" y1="48.768" x2="16.422" y2="49.784" width="0" layer="19" extent="1-1"/>
+<contactref element="R3" pad="8"/>
+<wire x1="14.974" y1="48.768" x2="18.288" y2="48.768" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$32">
 <contactref element="U7" pad="U22"/>
@@ -10027,9 +9966,6 @@ http://www.semiconductors.philips.com/pip/2N7002T.html&lt;br&gt;
 <wire x1="147.486" y1="7.112" x2="149.5552" y2="18.6944" width="0" layer="19" extent="1-1"/>
 <wire x1="139.026" y1="11.176" x2="147.486" y2="7.112" width="0" layer="19" extent="1-1"/>
 <wire x1="52.9996" y1="25.0952" x2="133.262" y2="43.688" width="0" layer="19" extent="1-1"/>
-<wire x1="51.7984" y1="26.9508" x2="52.9996" y2="25.0952" width="0" layer="19" extent="1-1"/>
-<wire x1="51.7984" y1="28.8812" x2="51.7984" y2="26.9508" width="0" layer="19" extent="1-1"/>
-<wire x1="49.9952" y1="22.3328" x2="52.9996" y2="25.0952" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWR_ENA_VCCAUX">
 <contactref element="U$5" pad="P$27"/>
