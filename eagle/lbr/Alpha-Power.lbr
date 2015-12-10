@@ -422,24 +422,21 @@
 <text x="-15.24" y="10.16" size="1.778" layer="94">&gt;NAME</text>
 </symbol>
 <symbol name="LMZ22008">
-<wire x1="-33.02" y1="20.32" x2="33.02" y2="20.32" width="0.254" layer="94"/>
-<wire x1="33.02" y1="20.32" x2="33.02" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="33.02" y1="-22.86" x2="-33.02" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="-33.02" y1="-22.86" x2="-33.02" y2="20.32" width="0.254" layer="94"/>
-<pin name="VIN@2" x="-38.1" y="10.16" visible="pin" length="middle" direction="pwr"/>
-<pin name="SYNC" x="-38.1" y="-17.78" visible="pin" length="middle" direction="in"/>
-<pin name="EN" x="-38.1" y="0" visible="pin" length="middle" direction="in"/>
-<pin name="AGND@5" x="2.54" y="-27.94" visible="pin" length="middle" direction="pwr" rot="R90"/>
-<pin name="PGND" x="-7.62" y="-27.94" visible="pin" length="middle" direction="pwr" rot="R90"/>
-<pin name="FB" x="17.78" y="-27.94" visible="pin" length="middle" direction="in" rot="R90"/>
-<pin name="SS/TRK" x="-38.1" y="-10.16" visible="pin" length="middle" direction="in"/>
-<pin name="SH" x="-17.78" y="-27.94" visible="pin" length="middle" rot="R90"/>
-<text x="-20.32" y="22.86" size="1.778" layer="94">&gt;VALUE</text>
-<text x="-20.32" y="10.16" size="1.778" layer="94">&gt;NAME</text>
-<pin name="VOUT@10" x="38.1" y="15.24" visible="pin" length="middle" direction="pwr" rot="R180"/>
-<pin name="VIN@1" x="-38.1" y="15.24" visible="pin" length="middle" direction="pwr"/>
-<pin name="AGND@6" x="7.62" y="-27.94" visible="pin" length="middle" direction="pwr" rot="R90"/>
-<pin name="VOUT@11" x="38.1" y="10.16" visible="pin" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-17.78" y1="22.86" x2="17.78" y2="22.86" width="0.254" layer="94"/>
+<wire x1="17.78" y1="22.86" x2="17.78" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-22.86" x2="-17.78" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-22.86" x2="-17.78" y2="22.86" width="0.254" layer="94"/>
+<pin name="SYNC" x="-22.86" y="-7.62" visible="pin" length="middle" direction="in"/>
+<pin name="EN" x="-22.86" y="2.54" visible="pin" length="middle" direction="in"/>
+<pin name="AGND" x="2.54" y="-27.94" visible="pin" length="middle" direction="pwr" rot="R90"/>
+<pin name="PGND" x="-2.54" y="-27.94" visible="pin" length="middle" direction="pwr" rot="R90"/>
+<pin name="FB" x="22.86" y="-2.54" visible="pin" length="middle" direction="in" rot="R180"/>
+<pin name="SS/TRK" x="-22.86" y="-17.78" visible="pin" length="middle" direction="in"/>
+<pin name="SH" x="22.86" y="-17.78" visible="pin" length="middle" rot="R180"/>
+<text x="-7.62" y="25.4" size="1.778" layer="94">&gt;VALUE</text>
+<text x="-7.62" y="12.7" size="1.778" layer="94">&gt;NAME</text>
+<pin name="VOUT" x="22.86" y="17.78" visible="pin" length="middle" direction="pwr" rot="R180"/>
+<pin name="VIN" x="-22.86" y="17.78" visible="pin" length="middle" direction="pwr"/>
 </symbol>
 <symbol name="EN5364QI">
 <wire x1="-15.24" y1="38.1" x2="-15.24" y2="-40.64" width="0.254" layer="94"/>
@@ -448,25 +445,25 @@
 <wire x1="17.78" y1="38.1" x2="-15.24" y2="38.1" width="0.254" layer="94"/>
 <pin name="PVIN" x="-20.32" y="33.02" visible="pin" length="middle" direction="pwr"/>
 <pin name="AVIN" x="-20.32" y="27.94" visible="pin" length="middle" direction="pwr"/>
-<pin name="ENABLE" x="-20.32" y="20.32" visible="pin" length="middle" direction="in"/>
+<pin name="ENABLE" x="-20.32" y="22.86" visible="pin" length="middle" direction="in"/>
 <pin name="PGND" x="7.62" y="-45.72" visible="pin" length="middle" direction="pwr" rot="R90"/>
-<pin name="SS" x="-20.32" y="-33.02" visible="pin" length="middle" direction="in"/>
+<pin name="SS" x="-20.32" y="-35.56" visible="pin" length="middle" direction="in"/>
 <pin name="AGND" x="-5.08" y="-45.72" visible="pin" length="middle" direction="pwr" rot="R90"/>
 <pin name="VOUT" x="22.86" y="33.02" visible="pin" length="middle" direction="pwr" rot="R180"/>
-<pin name="VFB" x="22.86" y="20.32" visible="pin" length="middle" rot="R180"/>
+<pin name="VFB" x="22.86" y="17.78" visible="pin" length="middle" rot="R180"/>
 <text x="-4.8514" y="39.624" size="2.0828" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-5.2832" y="45.085" size="2.0828" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
-<pin name="S_IN" x="-20.32" y="5.08" visible="pin" length="middle" direction="in"/>
-<pin name="S_OUT" x="22.86" y="5.08" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="EN_PB" x="-20.32" y="15.24" visible="pin" length="middle" direction="in"/>
-<pin name="POK" x="22.86" y="-7.62" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="EAOUT" x="22.86" y="-17.78" visible="pin" length="middle" direction="out" rot="R180"/>
-<pin name="OCP_ADJ" x="-20.32" y="-27.94" visible="pin" length="middle" direction="in"/>
+<pin name="S_IN" x="-20.32" y="2.54" visible="pin" length="middle" direction="in"/>
+<pin name="S_OUT" x="22.86" y="-10.16" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="EN_PB" x="-20.32" y="17.78" visible="pin" length="middle" direction="in"/>
+<pin name="POK" x="22.86" y="-35.56" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="EAOUT" x="22.86" y="-15.24" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="OCP_ADJ" x="-20.32" y="-25.4" visible="pin" length="middle" direction="in"/>
 <pin name="MAR1" x="-20.32" y="-7.62" visible="pin" length="middle" direction="in"/>
 <pin name="MAR2" x="-20.32" y="-12.7" visible="pin" length="middle" direction="in"/>
-<pin name="VSENSE" x="22.86" y="27.94" visible="pin" length="middle" rot="R180"/>
-<pin name="S_DELAY" x="-20.32" y="-22.86" visible="pin" length="middle" direction="in"/>
-<pin name="M/S" x="-20.32" y="0" visible="pin" length="middle" direction="in"/>
+<pin name="VSENSE" x="22.86" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="S_DELAY" x="-20.32" y="-2.54" visible="pin" length="middle" direction="in"/>
+<pin name="M/S" x="-20.32" y="7.62" visible="pin" length="middle" direction="in"/>
 </symbol>
 <symbol name="EN6337QI">
 <wire x1="-15.24" y1="22.86" x2="15.24" y2="22.86" width="0.254" layer="94"/>
@@ -474,15 +471,15 @@
 <wire x1="15.24" y1="-22.86" x2="-15.24" y2="-22.86" width="0.254" layer="94"/>
 <wire x1="-15.24" y1="-22.86" x2="-15.24" y2="22.86" width="0.254" layer="94"/>
 <pin name="PVIN" x="-20.32" y="17.78" visible="pin" length="middle" direction="pwr"/>
-<pin name="ENABLE" x="-20.32" y="12.7" visible="pin" length="middle" direction="in"/>
-<pin name="AVIN" x="-20.32" y="7.62" visible="pin" length="middle" direction="pwr"/>
+<pin name="ENABLE" x="-20.32" y="7.62" visible="pin" length="middle" direction="in"/>
+<pin name="AVIN" x="-20.32" y="12.7" visible="pin" length="middle" direction="pwr"/>
 <pin name="AGND" x="-5.08" y="-27.94" visible="pin" length="middle" direction="pwr" rot="R90"/>
 <pin name="PGND" x="5.08" y="-27.94" visible="pin" length="middle" direction="pwr" rot="R90"/>
 <pin name="VOUT" x="20.32" y="17.78" visible="pin" length="middle" direction="pwr" rot="R180"/>
-<pin name="VFB" x="20.32" y="7.62" visible="pin" length="middle" direction="in" rot="R180"/>
+<pin name="VFB" x="20.32" y="2.54" visible="pin" length="middle" direction="in" rot="R180"/>
 <pin name="LLM/SYNC" x="-20.32" y="-2.54" visible="pin" length="middle" direction="in"/>
-<pin name="SS" x="-20.32" y="-15.24" visible="pin" length="middle"/>
-<pin name="POK" x="20.32" y="-2.54" visible="pin" length="middle" direction="out" rot="R180"/>
+<pin name="SS" x="-20.32" y="-17.78" visible="pin" length="middle"/>
+<pin name="POK" x="20.32" y="-17.78" visible="pin" length="middle" direction="out" rot="R180"/>
 <pin name="RLLM" x="-20.32" y="-7.62" visible="pin" length="middle" direction="in"/>
 <text x="-9.9314" y="26.924" size="2.0828" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-10.3632" y="32.385" size="2.0828" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
@@ -499,7 +496,7 @@
 <pin name="!SHDN" x="-15.24" y="0" visible="pin" length="middle" direction="in"/>
 <pin name="GND" x="-15.24" y="-7.62" visible="pin" length="middle" direction="pwr"/>
 <text x="-7.62" y="12.7" size="2.0828" layer="95">&gt;NAME</text>
-<text x="-7.62" y="-15.24" size="2.0828" layer="96">&gt;VALUE</text>
+<text x="-12.7" y="-15.24" size="2.0828" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -534,18 +531,15 @@
 <devices>
 <device name="" package="NDY">
 <connects>
-<connect gate="G$1" pin="AGND@5" pad="P$5"/>
-<connect gate="G$1" pin="AGND@6" pad="P$6"/>
+<connect gate="G$1" pin="AGND" pad="P$5 P$6"/>
 <connect gate="G$1" pin="EN" pad="P$4"/>
 <connect gate="G$1" pin="FB" pad="P$7"/>
 <connect gate="G$1" pin="PGND" pad="P$8"/>
 <connect gate="G$1" pin="SH" pad="P$10"/>
 <connect gate="G$1" pin="SS/TRK" pad="P$9"/>
 <connect gate="G$1" pin="SYNC" pad="P$3"/>
-<connect gate="G$1" pin="VIN@1" pad="P$1"/>
-<connect gate="G$1" pin="VIN@2" pad="P$2"/>
-<connect gate="G$1" pin="VOUT@10" pad="P$11"/>
-<connect gate="G$1" pin="VOUT@11" pad="P$12"/>
+<connect gate="G$1" pin="VIN" pad="P$1 P$2"/>
+<connect gate="G$1" pin="VOUT" pad="P$11 P$12"/>
 </connects>
 <technologies>
 <technology name="">
@@ -566,18 +560,15 @@ http://www.ti.com/lit/ds/symlink/lmz13608.pdf</description>
 <devices>
 <device name="" package="NDY">
 <connects>
-<connect gate="G$1" pin="AGND@5" pad="P$5"/>
-<connect gate="G$1" pin="AGND@6" pad="P$6"/>
+<connect gate="G$1" pin="AGND" pad="P$5 P$6"/>
 <connect gate="G$1" pin="EN" pad="P$4"/>
 <connect gate="G$1" pin="FB" pad="P$7"/>
 <connect gate="G$1" pin="PGND" pad="P$8"/>
 <connect gate="G$1" pin="SH" pad="P$10"/>
 <connect gate="G$1" pin="SS/TRK" pad="P$9"/>
 <connect gate="G$1" pin="SYNC" pad="P$3"/>
-<connect gate="G$1" pin="VIN@1" pad="P$1"/>
-<connect gate="G$1" pin="VIN@2" pad="P$2"/>
-<connect gate="G$1" pin="VOUT@10" pad="P$11"/>
-<connect gate="G$1" pin="VOUT@11" pad="P$12"/>
+<connect gate="G$1" pin="VIN" pad="P$1 P$2"/>
+<connect gate="G$1" pin="VOUT" pad="P$11 P$12"/>
 </connects>
 <technologies>
 <technology name="">
@@ -694,7 +685,7 @@ Voltage Mode Synchronous PWM Buck with Integrated Inductor</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LT3060">
+<deviceset name="LT3060?-*">
 <description>Micropower, Low Noise, 100mA LDO, Linear Regulator</description>
 <gates>
 <gate name="G$1" symbol="LT3060" x="0" y="0"/>
@@ -714,6 +705,28 @@ Voltage Mode Synchronous PWM Buck with Integrated Inductor</description>
 <attribute name="MPN" value="LT3060ITS8-15#TRMPBF" constant="no"/>
 <attribute name="OC_FARNELL" value="2471073" constant="no"/>
 <attribute name="SUPPLIER" value="Linear Technology" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="ITS8" package="TSOT-8-23">
+<connects>
+<connect gate="G$1" pin="!SHDN" pad="7"/>
+<connect gate="G$1" pin="ADJ" pad="2"/>
+<connect gate="G$1" pin="GND" pad="8"/>
+<connect gate="G$1" pin="IN" pad="5 6"/>
+<connect gate="G$1" pin="OUT" pad="3 4"/>
+<connect gate="G$1" pin="REF/BYP" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="" constant="no"/>
+<attribute name="SUPPLIER" value="Linear Technology" constant="no"/>
+</technology>
+<technology name="15">
+<attribute name="MPN" value="LT3060ITS8-15#TRMPBF" constant="no"/>
+<attribute name="OC_FARNELL" value="2471073" constant="no"/>
+<attribute name="SUPPLIER" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
