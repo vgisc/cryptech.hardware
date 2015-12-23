@@ -25180,8 +25180,8 @@ EAGLE CAD Libraries on element14&lt;/a&gt;</description>
 <pin name="VSSA@40" x="5.08" y="-58.42" length="short" direction="pwr" rot="R90"/>
 <pin name="VREF+@41" x="40.64" y="2.54" length="middle" direction="pwr" rot="R180"/>
 <pin name="VDDA@42" x="25.4" y="50.8" length="short" direction="pwr" rot="R270"/>
-<pin name="WKUP/PA0" x="38.1" y="7.62" length="short" rot="R180"/>
-<pin name="PA1" x="38.1" y="10.16" length="short" rot="R180"/>
+<pin name="WKUP/USART2_CTS/PA0" x="38.1" y="7.62" length="short" rot="R180"/>
+<pin name="USART2_RTS/PA1" x="38.1" y="10.16" length="short" rot="R180"/>
 <pin name="USART2_TX/PA2" x="38.1" y="12.7" length="short" rot="R180"/>
 <pin name="FMC_SDCKE0/PH2" x="38.1" y="15.24" length="short" rot="R180"/>
 <pin name="FMC_SDNE0/PH3" x="38.1" y="17.78" length="short" rot="R180"/>
@@ -25264,9 +25264,9 @@ pin 53-104)</text>
 <wire x1="-38.1" y1="50.8" x2="-38.1" y2="-53.34" width="0.254" layer="94"/>
 <wire x1="35.56" y1="50.8" x2="35.56" y2="-53.34" width="0.254" layer="94"/>
 <wire x1="-38.1" y1="-53.34" x2="35.56" y2="-53.34" width="0.254" layer="94"/>
-<pin name="PB13" x="-40.64" y="30.48" length="short"/>
-<pin name="PB14" x="-40.64" y="27.94" length="short"/>
-<pin name="PB15" x="-40.64" y="25.4" length="short"/>
+<pin name="PB13/SPI2_SCK" x="-40.64" y="30.48" length="short"/>
+<pin name="PB14/SPI2_MISO" x="-40.64" y="27.94" length="short"/>
+<pin name="PB15/SPI2_MOSI" x="-40.64" y="25.4" length="short"/>
 <pin name="PD8/FMC_D13" x="-40.64" y="22.86" length="short"/>
 <pin name="PD9/FMC_D14" x="-40.64" y="20.32" length="short"/>
 <pin name="PD10/FMC_D15" x="-40.64" y="17.78" length="short"/>
@@ -25299,13 +25299,13 @@ pin 53-104)</text>
 <pin name="VDD@137" x="12.7" y="53.34" length="short" direction="pwr" rot="R270"/>
 <pin name="PC6" x="38.1" y="-17.78" length="short" rot="R180"/>
 <pin name="PC7" x="38.1" y="-15.24" length="short" rot="R180"/>
-<pin name="PC8" x="38.1" y="-12.7" length="short" rot="R180"/>
-<pin name="PC9" x="38.1" y="-10.16" length="short" rot="R180"/>
+<pin name="SDIO_D0/PC8" x="38.1" y="-12.7" length="short" rot="R180"/>
+<pin name="SDIO_D1/PC9" x="38.1" y="-10.16" length="short" rot="R180"/>
 <pin name="PA8" x="38.1" y="-7.62" length="short" rot="R180"/>
-<pin name="PA9" x="38.1" y="-5.08" length="short" rot="R180"/>
-<pin name="PA10" x="38.1" y="-2.54" length="short" rot="R180"/>
-<pin name="PA11" x="38.1" y="0" length="short" rot="R180"/>
-<pin name="PA12" x="38.1" y="2.54" length="short" rot="R180"/>
+<pin name="USART1_TX/PA9" x="38.1" y="-5.08" length="short" rot="R180"/>
+<pin name="USART1_RX/PA10" x="38.1" y="-2.54" length="short" rot="R180"/>
+<pin name="USART1_CTS/PA11" x="38.1" y="0" length="short" rot="R180"/>
+<pin name="USART1_RTS/PA12" x="38.1" y="2.54" length="short" rot="R180"/>
 <pin name="JTMS-SWDIO/PA13" x="38.1" y="5.08" length="short" rot="R180"/>
 <pin name="VCAP2@148" x="40.64" y="43.18" length="middle" rot="R180"/>
 <pin name="VSS@149" x="10.16" y="-55.88" length="short" direction="pwr" rot="R90"/>
@@ -25331,12 +25331,12 @@ pin 105-156)</text>
 <pin name="VDD@158" x="-22.86" y="53.34" length="short" direction="pwr" rot="R270"/>
 <pin name="PA14/JTCK-SWCLK" x="-40.64" y="25.4" length="short"/>
 <pin name="PA15/JTDI" x="-40.64" y="22.86" length="short"/>
-<pin name="PC10/SPI3_SCK" x="-40.64" y="20.32" length="short"/>
-<pin name="PC11/SPI3_MISO" x="-40.64" y="17.78" length="short"/>
-<pin name="PC12/SPI3_MOSI" x="-40.64" y="15.24" length="short"/>
+<pin name="PC10/SPI3_SCK/SDIO_D2" x="-40.64" y="20.32" length="short"/>
+<pin name="PC11/SPI3_MISO/SDIO_D3" x="-40.64" y="17.78" length="short"/>
+<pin name="PC12/SPI3_MOSI/SDIO_CK" x="-40.64" y="15.24" length="short"/>
 <pin name="PD0/FMC_D2" x="-40.64" y="12.7" length="short"/>
 <pin name="PD1/FMC_D3" x="-40.64" y="10.16" length="short"/>
-<pin name="PD2" x="-40.64" y="7.62" length="short"/>
+<pin name="PD2/SDIO_CMD" x="-40.64" y="7.62" length="short"/>
 <pin name="PD3/FMC_CLK" x="-40.64" y="5.08" length="short"/>
 <pin name="PD4/FMC_NOE" x="-40.64" y="2.54" length="short"/>
 <pin name="PD5/FMC_NWE" x="-40.64" y="0" length="short"/>
@@ -25379,8 +25379,8 @@ pin 105-156)</text>
 <pin name="FMC_NBL3/PI5" x="38.1" y="20.32" length="short" rot="R180"/>
 <pin name="FMC_D28/PI6" x="38.1" y="22.86" length="short" rot="R180"/>
 <pin name="FMC_D29/PI7" x="38.1" y="25.4" length="short" rot="R180"/>
-<text x="-10.16" y="22.86" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="17.78" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-12.7" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-12.7" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <text x="-10.16" y="38.1" size="1.778" layer="97">BANK D
 (top,
 pn 157-208)</text>
@@ -25414,7 +25414,6 @@ pn 157-208)</text>
 <connect gate="G$1" pin="NRST@34" pad="34"/>
 <connect gate="G$1" pin="OSC_IN/PH0" pad="32"/>
 <connect gate="G$1" pin="OSC_OUT/PH1" pad="33"/>
-<connect gate="G$1" pin="PA1" pad="44"/>
 <connect gate="G$1" pin="PC1" pad="36"/>
 <connect gate="G$1" pin="PC13" pad="8"/>
 <connect gate="G$1" pin="PC14/OSC32_IN" pad="9"/>
@@ -25437,6 +25436,7 @@ pn 157-208)</text>
 <connect gate="G$1" pin="PI14" pad="21"/>
 <connect gate="G$1" pin="PI8" pad="7"/>
 <connect gate="G$1" pin="PI9/FMC_D30" pad="11"/>
+<connect gate="G$1" pin="USART2_RTS/PA1" pad="44"/>
 <connect gate="G$1" pin="USART2_RX/PA3" pad="50"/>
 <connect gate="G$1" pin="USART2_TX/PA2" pad="45"/>
 <connect gate="G$1" pin="VBAT@6" pad="6"/>
@@ -25450,7 +25450,7 @@ pn 157-208)</text>
 <connect gate="G$1" pin="VSS@25" pad="25"/>
 <connect gate="G$1" pin="VSS@51" pad="51"/>
 <connect gate="G$1" pin="VSSA@40" pad="40"/>
-<connect gate="G$1" pin="WKUP/PA0" pad="43"/>
+<connect gate="G$1" pin="WKUP/USART2_CTS/PA0" pad="43"/>
 <connect gate="G$2" pin="FMC_D10/PE13" pad="87"/>
 <connect gate="G$2" pin="FMC_D11/PE14" pad="88"/>
 <connect gate="G$2" pin="FMC_D12/PE15" pad="89"/>
@@ -25514,18 +25514,12 @@ pn 157-208)</text>
 <connect gate="G$3" pin="FMC_INT3/PG7" pad="134"/>
 <connect gate="G$3" pin="FMC_SDCLK/PG8" pad="135"/>
 <connect gate="G$3" pin="JTMS-SWDIO/PA13" pad="147"/>
-<connect gate="G$3" pin="PA10" pad="144"/>
-<connect gate="G$3" pin="PA11" pad="145"/>
-<connect gate="G$3" pin="PA12" pad="146"/>
 <connect gate="G$3" pin="PA8" pad="142"/>
-<connect gate="G$3" pin="PA9" pad="143"/>
-<connect gate="G$3" pin="PB13" pad="105"/>
-<connect gate="G$3" pin="PB14" pad="106"/>
-<connect gate="G$3" pin="PB15" pad="107"/>
+<connect gate="G$3" pin="PB13/SPI2_SCK" pad="105"/>
+<connect gate="G$3" pin="PB14/SPI2_MISO" pad="106"/>
+<connect gate="G$3" pin="PB15/SPI2_MOSI" pad="107"/>
 <connect gate="G$3" pin="PC6" pad="138"/>
 <connect gate="G$3" pin="PC7" pad="139"/>
-<connect gate="G$3" pin="PC8" pad="140"/>
-<connect gate="G$3" pin="PC9" pad="141"/>
 <connect gate="G$3" pin="PD10/FMC_D15" pad="110"/>
 <connect gate="G$3" pin="PD11/FMC_A16" pad="111"/>
 <connect gate="G$3" pin="PD12/FMC_A17" pad="112"/>
@@ -25546,6 +25540,12 @@ pn 157-208)</text>
 <connect gate="G$3" pin="PK0" pad="126"/>
 <connect gate="G$3" pin="PK1" pad="127"/>
 <connect gate="G$3" pin="PK2" pad="128"/>
+<connect gate="G$3" pin="SDIO_D0/PC8" pad="140"/>
+<connect gate="G$3" pin="SDIO_D1/PC9" pad="141"/>
+<connect gate="G$3" pin="USART1_CTS/PA11" pad="145"/>
+<connect gate="G$3" pin="USART1_RTS/PA12" pad="146"/>
+<connect gate="G$3" pin="USART1_RX/PA10" pad="144"/>
+<connect gate="G$3" pin="USART1_TX/PA9" pad="143"/>
 <connect gate="G$3" pin="VCAP2@148" pad="148"/>
 <connect gate="G$3" pin="VDD@115" pad="115"/>
 <connect gate="G$3" pin="VDD@124" pad="124"/>
@@ -25572,12 +25572,12 @@ pn 157-208)</text>
 <connect gate="G$4" pin="PA15/JTDI" pad="160"/>
 <connect gate="G$4" pin="PB8" pad="198"/>
 <connect gate="G$4" pin="PB9" pad="199"/>
-<connect gate="G$4" pin="PC10/SPI3_SCK" pad="161"/>
-<connect gate="G$4" pin="PC11/SPI3_MISO" pad="162"/>
-<connect gate="G$4" pin="PC12/SPI3_MOSI" pad="163"/>
+<connect gate="G$4" pin="PC10/SPI3_SCK/SDIO_D2" pad="161"/>
+<connect gate="G$4" pin="PC11/SPI3_MISO/SDIO_D3" pad="162"/>
+<connect gate="G$4" pin="PC12/SPI3_MOSI/SDIO_CK" pad="163"/>
 <connect gate="G$4" pin="PD0/FMC_D2" pad="164"/>
 <connect gate="G$4" pin="PD1/FMC_D3" pad="165"/>
-<connect gate="G$4" pin="PD2" pad="166"/>
+<connect gate="G$4" pin="PD2/SDIO_CMD" pad="166"/>
 <connect gate="G$4" pin="PD3/FMC_CLK" pad="167"/>
 <connect gate="G$4" pin="PD4/FMC_NOE" pad="168"/>
 <connect gate="G$4" pin="PD5/FMC_NWE" pad="169"/>
@@ -37670,7 +37670,7 @@ recommended.</text>
 <text x="299.72" y="17.78" size="0.8128" layer="91">PDR_ON high enables
 internal power regulator</text>
 <text x="368.3" y="40.64" size="1.778" layer="91">CL 10pF</text>
-<text x="116.84" y="137.16" size="1.27" layer="91">FPGA_DONE can be swapped with any
+<text x="99.06" y="127" size="1.27" layer="91">FPGA_DONE can be swapped with any
 other available GPIO pin on the ARM</text>
 <text x="137.16" y="-46.99" size="1.778" layer="91">*) FPGA_GPIO_*, FPGA_IRQ_N_* and
 FPGA_{PROGRAM,INIT}_B signals
@@ -37867,8 +37867,8 @@ available GPIO on the ARM</text>
 <label x="114.3" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="165.1" y1="195.58" x2="165.1" y2="114.3" width="0.762" layer="92"/>
-<wire x1="165.1" y1="195.58" x2="134.62" y2="195.58" width="0.762" layer="92"/>
+<wire x1="147.32" y1="195.58" x2="147.32" y2="114.3" width="0.762" layer="92"/>
+<wire x1="147.32" y1="195.58" x2="134.62" y2="195.58" width="0.762" layer="92"/>
 <label x="134.62" y="198.12" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -38334,31 +38334,31 @@ available GPIO on the ARM</text>
 <net name="FMC_D0" class="2">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD14/FMC_D0"/>
-<wire x1="187.96" y1="157.48" x2="165.1" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="157.48" x2="147.32" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_D1" class="2">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD15/FMC_D1"/>
-<wire x1="187.96" y1="154.94" x2="165.1" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="154.94" x2="147.32" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_D13" class="2">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD8/FMC_D13"/>
-<wire x1="187.96" y1="177.8" x2="165.1" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="177.8" x2="147.32" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_D14" class="2">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD9/FMC_D14"/>
-<wire x1="187.96" y1="175.26" x2="165.1" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="175.26" x2="147.32" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_D15" class="2">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD10/FMC_D15"/>
-<wire x1="187.96" y1="172.72" x2="165.1" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="172.72" x2="147.32" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_D22" class="2">
@@ -38394,37 +38394,37 @@ available GPIO on the ARM</text>
 <net name="FMC_A12" class="3">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PG2/FMC_A12"/>
-<wire x1="187.96" y1="124.46" x2="165.1" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="124.46" x2="147.32" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_A13" class="3">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PG3/FMC_A13"/>
-<wire x1="187.96" y1="121.92" x2="165.1" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="121.92" x2="147.32" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_A14" class="3">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PG4/FMC_A14"/>
-<wire x1="187.96" y1="119.38" x2="165.1" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="119.38" x2="147.32" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_A16" class="3">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD11/FMC_A16"/>
-<wire x1="187.96" y1="170.18" x2="165.1" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="170.18" x2="147.32" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_A17" class="3">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD12/FMC_A17"/>
-<wire x1="187.96" y1="167.64" x2="165.1" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="167.64" x2="147.32" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_A18" class="3">
 <segment>
 <pinref part="U$1" gate="G$3" pin="PD13/FMC_A18"/>
-<wire x1="187.96" y1="165.1" x2="165.1" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="165.1" x2="147.32" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FMC_NL" class="0">
@@ -38965,30 +38965,30 @@ available GPIO on the ARM</text>
 </net>
 <net name="ARM_FPGA_CFG_SCLK" class="0">
 <segment>
-<pinref part="U$1" gate="G$4" pin="PC10/SPI3_SCK"/>
-<wire x1="187.96" y1="25.4" x2="180.34" y2="25.4" width="0.1524" layer="91"/>
-<label x="180.34" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="185.42" x2="180.34" y2="185.42" width="0.1524" layer="91"/>
+<label x="180.34" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$1" gate="G$3" pin="PB13/SPI2_SCK"/>
 </segment>
 </net>
 <net name="ARM_FPGA_CFG_MISO" class="0">
 <segment>
-<pinref part="U$1" gate="G$4" pin="PC11/SPI3_MISO"/>
-<wire x1="187.96" y1="22.86" x2="180.34" y2="22.86" width="0.1524" layer="91"/>
-<label x="180.34" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="182.88" x2="180.34" y2="182.88" width="0.1524" layer="91"/>
+<label x="180.34" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$1" gate="G$3" pin="PB14/SPI2_MISO"/>
 </segment>
 </net>
 <net name="ARM_FPGA_CFG_MOSI" class="0">
 <segment>
-<pinref part="U$1" gate="G$4" pin="PC12/SPI3_MOSI"/>
-<wire x1="187.96" y1="20.32" x2="180.34" y2="20.32" width="0.1524" layer="91"/>
-<label x="180.34" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="180.34" x2="180.34" y2="180.34" width="0.1524" layer="91"/>
+<label x="180.34" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$1" gate="G$3" pin="PB15/SPI2_MOSI"/>
 </segment>
 </net>
 <net name="ARM_FPGA_CFG_CONTROL" class="0">
 <segment>
-<pinref part="U$1" gate="G$4" pin="PD2"/>
-<wire x1="187.96" y1="12.7" x2="180.34" y2="12.7" width="0.1524" layer="91"/>
-<label x="180.34" y="12.7" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="152.4" x2="180.34" y2="152.4" width="0.1524" layer="91"/>
+<label x="180.34" y="152.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$1" gate="G$3" pin="PJ6"/>
 </segment>
 </net>
 <net name="FMC_A20" class="0">
@@ -39130,6 +39130,86 @@ available GPIO on the ARM</text>
 <pinref part="U$1" gate="G$2" pin="PA7/SPI1_MOSI"/>
 <wire x1="15.24" y1="30.48" x2="7.62" y2="30.48" width="0.1524" layer="91"/>
 <label x="7.62" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_CK" class="0">
+<segment>
+<pinref part="U$1" gate="G$4" pin="PC12/SPI3_MOSI/SDIO_CK"/>
+<wire x1="187.96" y1="20.32" x2="180.34" y2="20.32" width="0.1524" layer="91"/>
+<label x="180.34" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_CMD" class="0">
+<segment>
+<pinref part="U$1" gate="G$4" pin="PD2/SDIO_CMD"/>
+<wire x1="187.96" y1="12.7" x2="180.34" y2="12.7" width="0.1524" layer="91"/>
+<label x="180.34" y="12.7" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D3" class="0">
+<segment>
+<pinref part="U$1" gate="G$4" pin="PC11/SPI3_MISO/SDIO_D3"/>
+<wire x1="187.96" y1="22.86" x2="180.34" y2="22.86" width="0.1524" layer="91"/>
+<label x="180.34" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D2" class="0">
+<segment>
+<pinref part="U$1" gate="G$4" pin="PC10/SPI3_SCK/SDIO_D2"/>
+<wire x1="187.96" y1="25.4" x2="180.34" y2="25.4" width="0.1524" layer="91"/>
+<label x="180.34" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D0" class="0">
+<segment>
+<pinref part="U$1" gate="G$3" pin="SDIO_D0/PC8"/>
+<wire x1="266.7" y1="142.24" x2="274.32" y2="142.24" width="0.1524" layer="91"/>
+<label x="274.32" y="142.24" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D1" class="0">
+<segment>
+<pinref part="U$1" gate="G$3" pin="SDIO_D1/PC9"/>
+<wire x1="266.7" y1="144.78" x2="274.32" y2="144.78" width="0.1524" layer="91"/>
+<label x="274.32" y="144.78" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="FT_RTS" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="USART2_RTS/PA1"/>
+<wire x1="93.98" y1="167.64" x2="101.6" y2="167.64" width="0.1524" layer="91"/>
+<label x="101.6" y="167.64" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="FT_CTS" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="WKUP/USART2_CTS/PA0"/>
+<wire x1="93.98" y1="165.1" x2="101.6" y2="165.1" width="0.1524" layer="91"/>
+<label x="101.6" y="165.1" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="U$1" gate="G$3" pin="USART1_TX/PA9"/>
+<wire x1="266.7" y1="149.86" x2="274.32" y2="149.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="U$1" gate="G$3" pin="USART1_RX/PA10"/>
+<wire x1="266.7" y1="152.4" x2="274.32" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$57" class="0">
+<segment>
+<pinref part="U$1" gate="G$3" pin="USART1_CTS/PA11"/>
+<wire x1="266.7" y1="154.94" x2="274.32" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$58" class="0">
+<segment>
+<pinref part="U$1" gate="G$3" pin="USART1_RTS/PA12"/>
+<wire x1="266.7" y1="157.48" x2="274.32" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -40331,9 +40411,20 @@ wrapped with master key in MKM.</text>
 <text x="-81.28" y="-10.16" size="1.778" layer="91">MFP is Multi Function Pin.
 GPIO output from RTC.</text>
 <text x="-91.44" y="30.48" size="1.778" layer="91">i2c pull-ups, typically 10K for 100kHz</text>
-<text x="-147.32" y="35.56" size="2.54" layer="91">Real Time Clock</text>
-<text x="60.96" y="10.16" size="2.54" layer="91">Micro SD card goes here</text>
-<text x="68.58" y="2.54" size="1.778" layer="91">Look at Novena</text>
+<text x="-147.32" y="60.96" size="2.54" layer="91">Real Time Clock</text>
+<text x="30.48" y="58.42" size="2.54" layer="91">Micro SD card goes here</text>
+<text x="30.48" y="22.86" size="1.778" layer="91">Questions:
+
+1) Which connector to use?
+Haven't found good one with Eagle symbol. Some different kinds available.
+
+2) Novena seems to have card reset capability (power control from MCU).
+Do we want the same?
+
+3) Novena has two SD slots, and list power at 200mA.
+Do we need special power for the SD card, or can we use VCCO_3V3?</text>
+<text x="-147.32" y="53.34" size="1.778" layer="91">Should we keep this separate chip or rather connect
+VBAT to the STM32 and use the internal RTC?</text>
 </plain>
 <instances>
 <instance part="U6" gate="A" x="-101.6" y="5.08"/>
@@ -40473,6 +40564,42 @@ GPIO output from RTC.</text>
 <wire x1="-73.66" y1="22.86" x2="-68.58" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="22.86" x2="-68.58" y2="20.32" width="0.1524" layer="91"/>
 <junction x="-73.66" y="22.86"/>
+</segment>
+</net>
+<net name="SDIO_CK" class="0">
+<segment>
+<wire x1="48.26" y1="-5.08" x2="40.64" y2="-5.08" width="0.1524" layer="91"/>
+<label x="40.64" y="-5.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_CMD" class="0">
+<segment>
+<wire x1="48.26" y1="-10.16" x2="40.64" y2="-10.16" width="0.1524" layer="91"/>
+<label x="40.64" y="-10.16" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D3" class="0">
+<segment>
+<wire x1="48.26" y1="0" x2="40.64" y2="0" width="0.1524" layer="91"/>
+<label x="40.64" y="0" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D2" class="0">
+<segment>
+<wire x1="48.26" y1="2.54" x2="40.64" y2="2.54" width="0.1524" layer="91"/>
+<label x="40.64" y="2.54" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D0" class="0">
+<segment>
+<wire x1="48.26" y1="7.62" x2="40.64" y2="7.62" width="0.1524" layer="91"/>
+<label x="40.64" y="7.62" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDIO_D1" class="0">
+<segment>
+<wire x1="48.26" y1="5.08" x2="40.64" y2="5.08" width="0.1524" layer="91"/>
+<label x="40.64" y="5.08" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
