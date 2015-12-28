@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -500,7 +500,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LMZ22005">
+<deviceset name="LMZ22005" prefix="U">
 <gates>
 <gate name="G$1" symbol="LMZ22005" x="0" y="0"/>
 </gates>
@@ -524,7 +524,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LMZ22008">
+<deviceset name="LMZ22008" prefix="U">
 <gates>
 <gate name="G$1" symbol="LMZ22008" x="0" y="0"/>
 </gates>
@@ -549,7 +549,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LMZ13608">
+<deviceset name="LMZ13608" prefix="U">
 <description>LMZ13608 8-A SIMPLE SWITCHER
 Power Module With 36-V Maximum Input Voltage
 
@@ -581,7 +581,7 @@ http://www.ti.com/lit/ds/symlink/lmz13608.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="EN5364QI">
+<deviceset name="EN5364QI" prefix="U">
 <description>6A PowerSoC
 Voltage Mode Synchronous Buck PWM DC-DC Converter
 With Integrated Inductor</description>
@@ -622,7 +622,7 @@ With Integrated Inductor</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="EN6337QI">
+<deviceset name="EN6337QI" prefix="U">
 <description>3A PowerSoC
 Voltage Mode Synchronous PWM Buck with Integrated Inductor</description>
 <gates>
@@ -653,7 +653,7 @@ Voltage Mode Synchronous PWM Buck with Integrated Inductor</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="EN6347QI">
+<deviceset name="EN6347QI" prefix="U">
 <description>3A PowerSoC
 Voltage Mode Synchronous PWM Buck with Integrated Inductor</description>
 <gates>
@@ -685,7 +685,7 @@ Voltage Mode Synchronous PWM Buck with Integrated Inductor</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="LT3060?-*">
+<deviceset name="LT3060?-*" prefix="U">
 <description>Micropower, Low Noise, 100mA LDO, Linear Regulator</description>
 <gates>
 <gate name="G$1" symbol="LT3060" x="0" y="0"/>
