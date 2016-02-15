@@ -37135,7 +37135,6 @@ Based on the following sources:
 <attribute name="RATED_VOLTAGE" value="10V"/>
 </part>
 <part name="SUPPLY82" library="supply2" deviceset="GND" device=""/>
-<part name="SUPPLY223" library="supply2" deviceset="GND" device=""/>
 <part name="IC6" library="UsedComponents" deviceset="RCLAMP0502A" device="SC-89"/>
 <part name="SUPPLY224" library="supply2" deviceset="GND" device=""/>
 <part name="R88" library="resistor" deviceset="R-EU_" device="R0402" value="100">
@@ -37151,7 +37150,6 @@ Based on the following sources:
 <attribute name="RATED_VOLTAGE" value="10V"/>
 </part>
 <part name="SUPPLY225" library="supply2" deviceset="GND" device=""/>
-<part name="SUPPLY226" library="supply2" deviceset="GND" device=""/>
 <part name="R90" library="resistor" deviceset="R-EU_" device="R0402" value="10k">
 <attribute name="TOLERANCE" value="5%"/>
 </part>
@@ -40864,7 +40862,7 @@ copy of reference circuit</text>
 <text x="-48.26" y="0" size="1.778" layer="91">CL 10pF</text>
 <text x="-45.72" y="93.98" size="3.81" layer="91">Application access USB UART</text>
 <text x="147.32" y="-111.76" size="2.54" layer="94">USB-UART interface</text>
-<text x="121.92" y="-5.08" size="1.778" layer="91">If possible, line up with
+<text x="144.78" y="-12.7" size="1.778" layer="91">If possible, line up with
 corresponding header
 for MGMT USB-UART and
 label pins on silk screen</text>
@@ -41010,13 +41008,12 @@ label pins on silk screen</text>
 <attribute name="VALUE" x="71.12" y="43.18" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="J2" gate="G$1" x="124.46" y="-17.78"/>
-<instance part="P+88" gate="VCC" x="114.3" y="10.16" smashed="yes"/>
-<instance part="C214" gate="G$1" x="106.68" y="0" smashed="yes">
-<attribute name="NAME" x="96.52" y="-2.54" size="1.6764" layer="95"/>
-<attribute name="VALUE" x="96.52" y="-5.08" size="1.6764" layer="96"/>
+<instance part="P+88" gate="VCC" x="134.62" y="2.54" smashed="yes"/>
+<instance part="C214" gate="G$1" x="114.3" y="-7.62" smashed="yes">
+<attribute name="NAME" x="104.14" y="-10.16" size="1.6764" layer="95"/>
+<attribute name="VALUE" x="104.14" y="-12.7" size="1.6764" layer="96"/>
 </instance>
-<instance part="SUPPLY82" gate="GND" x="106.68" y="-10.16"/>
-<instance part="SUPPLY223" gate="GND" x="134.62" y="-30.48"/>
+<instance part="SUPPLY82" gate="GND" x="114.3" y="-27.94"/>
 <instance part="R91" gate="G$1" x="76.2" y="63.5" smashed="yes" rot="R270">
 <attribute name="TOLERANCE" x="76.2" y="63.5" size="1.778" layer="96" rot="R270" display="off"/>
 <attribute name="NAME" x="78.74" y="66.04" size="1.778" layer="95"/>
@@ -41169,13 +41166,11 @@ label pins on silk screen</text>
 <segment>
 <pinref part="C214" gate="G$1" pin="2"/>
 <pinref part="SUPPLY82" gate="GND" pin="GND"/>
-<wire x1="106.68" y1="-5.08" x2="106.68" y2="-7.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="6"/>
-<wire x1="132.08" y1="-20.32" x2="134.62" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="-20.32" x2="134.62" y2="-27.94" width="0.1524" layer="91"/>
-<pinref part="SUPPLY223" gate="GND" pin="GND"/>
+<wire x1="114.3" y1="-12.7" x2="114.3" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="-15.24" x2="114.3" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-15.24" x2="114.3" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="114.3" y="-15.24"/>
 </segment>
 </net>
 <net name="FT_RESET" class="0">
@@ -41213,9 +41208,8 @@ label pins on silk screen</text>
 <label x="-99.06" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="116.84" y1="-20.32" x2="114.3" y2="-20.32" width="0.1524" layer="91"/>
-<label x="106.68" y="-20.32" size="1.27" layer="95"/>
-<pinref part="J2" gate="G$1" pin="5"/>
+<wire x1="116.84" y1="-17.78" x2="111.76" y2="-17.78" width="0.1524" layer="91"/>
+<label x="101.6" y="-17.78" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="USB_DM" class="0">
@@ -41230,9 +41224,8 @@ label pins on silk screen</text>
 <label x="-99.06" y="45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="116.84" y1="-17.78" x2="114.3" y2="-17.78" width="0.1524" layer="91"/>
-<label x="106.68" y="-17.78" size="1.27" layer="95"/>
-<pinref part="J2" gate="G$1" pin="3"/>
+<wire x1="137.16" y1="-17.78" x2="132.08" y2="-17.78" width="0.1524" layer="91"/>
+<label x="139.7" y="-17.78" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="FT_VREGIN" class="0">
@@ -41505,9 +41498,9 @@ label pins on silk screen</text>
 <label x="45.72" y="50.8" size="1.27" layer="95"/>
 </segment>
 <segment>
-<wire x1="134.62" y1="-15.24" x2="132.08" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="J2" gate="G$1" pin="2"/>
-<label x="134.62" y="-15.24" size="1.27" layer="95"/>
+<wire x1="137.16" y1="-20.32" x2="132.08" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="6"/>
+<label x="139.7" y="-20.32" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="FT_RXD1" class="0">
@@ -41518,23 +41511,22 @@ label pins on silk screen</text>
 <label x="45.72" y="48.26" size="1.27" layer="95"/>
 </segment>
 <segment>
-<wire x1="134.62" y1="-17.78" x2="132.08" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="J2" gate="G$1" pin="4"/>
-<label x="134.62" y="-17.78" size="1.27" layer="95"/>
+<wire x1="116.84" y1="-20.32" x2="111.76" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="5"/>
+<label x="101.6" y="-20.32" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="VCCO_3V3" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="116.84" y1="-15.24" x2="114.3" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="-15.24" x2="114.3" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-15.24" x2="134.62" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="P+88" gate="VCC" pin="VCC"/>
-<label x="106.68" y="12.7" size="1.778" layer="95"/>
+<label x="129.54" y="5.08" size="1.778" layer="95"/>
 <pinref part="C214" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="5.08" x2="114.3" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="2.54" x2="106.68" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="5.08" x2="114.3" y2="5.08" width="0.1524" layer="91"/>
-<junction x="114.3" y="5.08"/>
+<wire x1="134.62" y1="-5.08" x2="134.62" y2="0" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="-5.08" x2="134.62" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="134.62" y="-5.08"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="-15.24" x2="134.62" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+91" gate="VCC" pin="VCC"/>
@@ -41555,7 +41547,7 @@ copy of reference circuit</text>
 <text x="-45.72" y="2.54" size="1.778" layer="91">CL 10pF</text>
 <text x="-45.72" y="96.52" size="3.81" layer="91">Management access USB UART</text>
 <text x="149.86" y="-109.22" size="2.54" layer="94">MGMT USB-UART</text>
-<text x="124.46" y="-2.54" size="1.778" layer="91">If possible, line up with
+<text x="147.32" y="-10.16" size="1.778" layer="91">If possible, line up with
 corresponding header
 for USB-UART and label
 pins on silk screen</text>
@@ -41698,13 +41690,12 @@ pins on silk screen</text>
 <attribute name="VALUE" x="73.66" y="45.72" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="J3" gate="G$1" x="127" y="-15.24"/>
-<instance part="P+90" gate="VCC" x="116.84" y="12.7" smashed="yes"/>
-<instance part="C215" gate="G$1" x="109.22" y="2.54" smashed="yes">
-<attribute name="NAME" x="99.06" y="0" size="1.6764" layer="95"/>
-<attribute name="VALUE" x="99.06" y="-2.54" size="1.6764" layer="96"/>
+<instance part="P+90" gate="VCC" x="137.16" y="5.08" smashed="yes"/>
+<instance part="C215" gate="G$1" x="116.84" y="-5.08" smashed="yes">
+<attribute name="NAME" x="106.68" y="-7.62" size="1.6764" layer="95"/>
+<attribute name="VALUE" x="106.68" y="-10.16" size="1.6764" layer="96"/>
 </instance>
-<instance part="SUPPLY225" gate="GND" x="109.22" y="-7.62"/>
-<instance part="SUPPLY226" gate="GND" x="137.16" y="-27.94"/>
+<instance part="SUPPLY225" gate="GND" x="116.84" y="-25.4"/>
 <instance part="R90" gate="G$1" x="78.74" y="66.04" smashed="yes" rot="R270">
 <attribute name="TOLERANCE" x="78.74" y="66.04" size="1.778" layer="96" rot="R270" display="off"/>
 <attribute name="NAME" x="81.28" y="68.58" size="1.778" layer="95"/>
@@ -41857,13 +41848,11 @@ pins on silk screen</text>
 <segment>
 <pinref part="C215" gate="G$1" pin="2"/>
 <pinref part="SUPPLY225" gate="GND" pin="GND"/>
-<wire x1="109.22" y1="-2.54" x2="109.22" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="J3" gate="G$1" pin="6"/>
-<wire x1="134.62" y1="-17.78" x2="137.16" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="-17.78" x2="137.16" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="SUPPLY226" gate="GND" pin="GND"/>
+<wire x1="116.84" y1="-10.16" x2="116.84" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="1"/>
+<wire x1="116.84" y1="-12.7" x2="116.84" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="-12.7" x2="116.84" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="116.84" y="-12.7"/>
 </segment>
 </net>
 <net name="FT_RESET1" class="0">
@@ -41899,6 +41888,11 @@ pins on silk screen</text>
 <wire x1="-109.22" y1="48.26" x2="-97.79" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="IC6" gate="G$1" pin="OUT2"/>
 <label x="-96.52" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="134.62" y1="-15.24" x2="139.7" y2="-15.24" width="0.1524" layer="91"/>
+<label x="142.24" y="-15.24" size="1.27" layer="95"/>
+<pinref part="J3" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="FT_MGMT_VREGIN" class="0">
@@ -42096,6 +42090,11 @@ pins on silk screen</text>
 <pinref part="IC6" gate="G$1" pin="OUT1"/>
 <label x="-96.52" y="53.34" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="114.3" y1="-15.24" x2="119.38" y2="-15.24" width="0.1524" layer="91"/>
+<label x="99.06" y="-15.24" size="1.27" layer="95"/>
+<pinref part="J3" gate="G$1" pin="3"/>
+</segment>
 </net>
 <net name="FT_MGMT_VPHY" class="0">
 <segment>
@@ -42174,46 +42173,17 @@ pins on silk screen</text>
 <pinref part="CN2" gate="G$1" pin="D-"/>
 </segment>
 </net>
-<net name="USB_DP" class="0">
-<segment>
-<wire x1="119.38" y1="-17.78" x2="116.84" y2="-17.78" width="0.1524" layer="91"/>
-<label x="109.22" y="-17.78" size="1.27" layer="95"/>
-<pinref part="J3" gate="G$1" pin="5"/>
-</segment>
-</net>
-<net name="USB_DM" class="0">
-<segment>
-<wire x1="119.38" y1="-15.24" x2="116.84" y2="-15.24" width="0.1524" layer="91"/>
-<label x="109.22" y="-15.24" size="1.27" layer="95"/>
-<pinref part="J3" gate="G$1" pin="3"/>
-</segment>
-</net>
-<net name="FT_TXD1" class="0">
-<segment>
-<wire x1="137.16" y1="-12.7" x2="134.62" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="J3" gate="G$1" pin="2"/>
-<label x="137.16" y="-12.7" size="1.27" layer="95"/>
-</segment>
-</net>
-<net name="FT_RXD1" class="0">
-<segment>
-<wire x1="137.16" y1="-15.24" x2="134.62" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="J3" gate="G$1" pin="4"/>
-<label x="137.16" y="-15.24" size="1.27" layer="95"/>
-</segment>
-</net>
 <net name="VCCO_3V3" class="0">
 <segment>
-<pinref part="J3" gate="G$1" pin="1"/>
-<wire x1="119.38" y1="-12.7" x2="116.84" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="-12.7" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-12.7" x2="137.16" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="P+90" gate="VCC" pin="VCC"/>
-<label x="109.22" y="15.24" size="1.778" layer="95"/>
+<label x="132.08" y="10.16" size="1.778" layer="95"/>
 <pinref part="C215" gate="G$1" pin="1"/>
-<wire x1="116.84" y1="7.62" x2="116.84" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="5.08" x2="109.22" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="7.62" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
-<junction x="116.84" y="7.62"/>
+<wire x1="137.16" y1="-2.54" x2="137.16" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="-2.54" x2="137.16" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="137.16" y="-2.54"/>
+<pinref part="J3" gate="G$1" pin="2"/>
+<wire x1="137.16" y1="-12.7" x2="134.62" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+89" gate="VCC" pin="VCC"/>
@@ -42228,12 +42198,22 @@ pins on silk screen</text>
 <wire x1="66.04" y1="53.34" x2="40.64" y2="53.34" width="0.1524" layer="91"/>
 <label x="48.26" y="53.34" size="1.27" layer="95"/>
 </segment>
+<segment>
+<wire x1="139.7" y1="-17.78" x2="134.62" y2="-17.78" width="0.1524" layer="91"/>
+<label x="142.24" y="-17.78" size="1.27" layer="95"/>
+<pinref part="J3" gate="G$1" pin="6"/>
+</segment>
 </net>
 <net name="FT_MGMT_RXD1" class="0">
 <segment>
 <pinref part="R89" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="50.8" x2="40.64" y2="50.8" width="0.1524" layer="91"/>
 <label x="48.26" y="50.8" size="1.27" layer="95"/>
+</segment>
+<segment>
+<wire x1="119.38" y1="-17.78" x2="114.3" y2="-17.78" width="0.1524" layer="91"/>
+<label x="99.06" y="-17.78" size="1.27" layer="95"/>
+<pinref part="J3" gate="G$1" pin="5"/>
 </segment>
 </net>
 </nets>
