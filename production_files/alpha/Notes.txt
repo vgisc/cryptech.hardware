@@ -1,0 +1,5 @@
+Outer layers must be plated to 36 um (1 oz).
+
+Type of surface finish is ENIG.
+
+Plugging of 0.25 mm and 0.5 mm vias according to IPC4761 type VII is necessary.

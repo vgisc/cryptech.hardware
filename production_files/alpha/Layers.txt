@@ -1,0 +1,24 @@
+Top Silk                - *.slt
+Top Mask                - *.smt
+
+Top Layer               - *.top
+Internal Layer #1       - *.in1
+Internal Layer #2       - *.in2
+Internal Layer #3       - *.in3
+Internal Layer #4       - *.in4
+Internal Layer #5       - *.in5
+Internal Layer #6       - *.in6
+Bottom                  - *.bot
+
+Bottom Mask             - *.smb
+Bottom Silk             - *.slb
+
+Outline                 - *.brd
+
+Plated Holes            - *.drp
+Non-plated Holes        - *.drn
+
+Paste Top               - *.pst
+Paste Bottom            - *.psb
+
+Plated Milling Contours - *.mil
