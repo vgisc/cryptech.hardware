@@ -1,0 +1,46 @@
+Designator	MPN	Manufacturer	Description	Comment	Quantity
+CN1, CN2	1734035-1	Tyco (TE Connectivity)	Mini-USB Type B SMD Connector	Alternatives from other vendors can be used	2
+	65100516121	Wurth Electronics			
+	690-005-299-043	EDAC			
+	67803-8020	Molex			
+D1, D2, D3, D4	BAT54LT1G	ON Semiconductor			4
+FB1, FB2, FB3, FB4	FBMH1608HL601-T	Taiyo Yuden			4
+FB5, FB6, FB7	BLM31PG330SN1*	Murata			3
+IC1, IC3	N25Q128A13ESE40*	Micron			2
+IC2, IC4	MC74AC244DW*	ON Semiconductor			2
+IC5, IC6	RCLAMP0502A.TCT	Semtech			2
+J1	61300611121	Wurth Electronics	Standard 0.1" (2.54 mm) Male Header 1x6 (aka PLS-6)	Alternatives from other vendors can be used	1
+J2, J3, JP3, JP7	61300621121	Wurth Electronics	Standard 0.1" (2.54 mm) Male Header 2x3 (aka PLD-6)		3
+JP1	694106301002	Wurth Electronics			1
+JP2, JP6	61300211121	Wurth Electronics	Standard 0.1" (2.54 mm) Male Header 1x2 (aka PLS-2)	Alternatives from other vendors can be used	5
+JP4	61300311121	Wurth Electronics	Standard 0.1" (2.54 mm) Male Header 1x3 (aka PLS-3)		1
+JP5	61301011121	Wurth Electronics	Standard 0.1" (2.54 mm) Male Header 1x10 (aka PLS-10)		1
+LED1, LED9, LED15, LED18	LTST-C191KGKT	Line-On	Green 0603 LED	Alternatives from other vendors can be used	6
+LED2, LED10, LED13, LED14	LTST-C191KRKT	Line-On	Red 0603 LED		4
+LED3, LED11, LED17	LTST-C191TBKT	Line-On	Blue 0603 LED		3
+LED4, LED12, LED16	LTST-C191KSKT	Line-On	Yellow 0603 LED		5
+Q1, Q4, Q6	2N7002LT1G	ON Semiconductor			3
+Q2	BC81840	Fairchild Semiconductor			1
+Q3	ABM8G-25.000MHZ-4Y-T3	Abracon			1
+Q5	ASFL1-50.000MHZ-EK-T	Abracon			1
+S1	36103205	Wurth Electronics	Shield Base Frame	Need to order both frame and cover!	1
+	36003200		Shield Cover		1
+S2	EVQPT9A15	Panasonic			1
+SV1	61300811121	Wurth Electronics	Standard 0.1" (2.54 mm) Male Header 1x8 (aka PLS-8)	Alternatives from other vendors can be used	1
+SV2, SV3	61301621121	Wurth Electronics	Standard 0.1" (2.54 mm) Male Header 2x8 (aka PLD-16)		2
+T1, T2	BC847BLT3G	ON Semiconductor			2
+U1	LMZ13608TZ/NOPB	Texas Instruments			1
+U2	LT3060ITS8-15#TRMPBF	Linear Technology			1
+U3	MC74HC1G14DTT1G	ON Semiconductor			1
+U4	STM32F429BIT6	STMicroelectronics			1
+U5, U6	IS42S32160F-75ETL	ISSI	512 Mbit (16Mx32) 3.3V SDRAM in TSOP-86	Different speed and/or temperature grade can be used	2
+U7	MCP79412-I/SN	Microchip			1
+U8, U9	FT232HL-REEL	FTDI			2
+U10	ATTINY828R-AU	Atmel			1
+U12	23K640-I/SN	Microchip			1
+U13	XC7A200T-1FBG484C	Xilinx			1
+U14, U15	EN6347QI	Altera			2
+U16	EN5364QI	Altera			1
+X1	ABS07-32.768KHZ-T	Abracon			1
+Y1, Y2	ABM8G-12.000MHZ-4Y-T3	Abracon			2
+	BGA-STD-025	ABL Heatsinks	Heatsink for the FPGA		1
