@@ -1,0 +1,18 @@
+ 1. Removed mounting holes
+ 2. Changed board size to 99.5 x 120 mm
+ 3. Removed UART Tx, Rx LEDs and resistors
+ 4. Moved power jack to the other edge of the board
+ 5. Pushed power jack slightly inwards to make it flush with the board edge
+ 6. Changed silkscreen text to "rev.03" and increased font 
+ 7. Added metal "PCB rev.03" text on bottom side of the board
+ 8. Removed soldermask from "Open Hardware" logo (to make it shine :)
+ 9. Added USB Vbus to J2 and J3 instead of VCCO_3V3
+10. Panic button moved to the other side of the board
+11. LEDs moved to the other side of the board
+12. Moved JP6
+13. Moved FPGA JTAG header
+14. Moved AVR GPIO header
+15. Moved POWER_OK and FPGA_DONE LEDs
+16. Combined JP7-JP9 into one header
+17. Added silkscreen for battery header JP4
+18. Combined JP7-JP9 into one 3x2-pin header
